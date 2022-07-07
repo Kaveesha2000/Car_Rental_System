@@ -7,8 +7,7 @@ import javax.persistence.Id;
 public class Schedule {
 
     @Id
-    private
-    String scheduleId;
+    private String scheduleId;
     private String driverId;
     private String carId;
     private String pickedDate;

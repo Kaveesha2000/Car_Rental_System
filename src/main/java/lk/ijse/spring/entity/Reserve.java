@@ -7,8 +7,7 @@ import javax.persistence.Id;
 public class Reserve {
 
     @Id
-    private
-    String reserveId;
+    private String reserveId;
     private String pickedDate;
     private String pickedTime;
     private String returnDate;

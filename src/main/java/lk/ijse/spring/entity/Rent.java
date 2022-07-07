@@ -7,8 +7,7 @@ import javax.persistence.Id;
 public class Rent {
 
     @Id
-    private
-    String paymentId;
+    private String paymentId;
     private double rentFee;
     private double extraKm;
     private double extraKmFee;
