@@ -13,7 +13,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
+/*@Transactional*/
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired

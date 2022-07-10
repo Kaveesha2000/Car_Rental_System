@@ -73,7 +73,7 @@ public class CustomerRepoTest {
     @Test
     public void testDTO(){
         CustomerDTO customerDTO = new CustomerDTO("","","","04152663301","","","","");
-
+        System.out.println(customerDTO);
     }
 
     @Test
