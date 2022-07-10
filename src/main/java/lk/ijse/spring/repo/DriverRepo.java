@@ -23,7 +23,7 @@ public interface DriverRepo extends JpaRepository<Driver,String> {
 
     Driver streamByDriverName(String driverName);
 
-    List<Driver> searchByName(String driverName);
+    List<Driver> searchByDriverName(String driverName);
 
 
     //test countBy

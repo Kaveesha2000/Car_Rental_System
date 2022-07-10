@@ -21,11 +21,9 @@ import java.util.Optional;
 public class CustomerRepoTest {
 
     @Autowired
-    CustomerRepo customerRepo; // Inject the dependency of Customer Repo
+    CustomerRepo customerRepo;
 
-    @Test // Test method
-    public void saveCustomer() {
-        //Ok let's save a customer using Customer Repo
+    public void addCustomers(){
         Customer customer1 = new Customer("C001","Dasun","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
         Customer customer2 = new Customer("C002","Kasun","Panadura","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
         Customer customer3 = new Customer("C003","Ramal","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
@@ -33,9 +31,14 @@ public class CustomerRepoTest {
         customerRepo.save(customer2);
         customerRepo.save(customer3);
     }
+    @Test
+    public void saveCustomer() {
+      addCustomers();
+    }
 
     @Test
     public void getAllCustomers() {
+        addCustomers();
         List<Customer> all = customerRepo.findAll();
         for (Customer customer : all) {
             System.out.println(customer.toString());
@@ -44,6 +47,7 @@ public class CustomerRepoTest {
 
     @Test
     public void searchCustomer() {
+        addCustomers();
         Optional<Customer> optional = customerRepo.findById("C001");
         boolean present = optional.isPresent();
         System.out.println(present);
@@ -68,7 +72,6 @@ public class CustomerRepoTest {
         }
 
     }
-
 
     @Test
     public void testDTO(){
@@ -98,7 +101,7 @@ public class CustomerRepoTest {
 
     @Test
     public void searchByName(){
-        List<Customer> customers = customerRepo.searchByName("Dasun");
+        List<Customer> customers = customerRepo.searchByCustomerName("Dasun");
         for (Customer customer : customers) {
             System.out.println(customer.toString());
         }
@@ -118,9 +121,6 @@ public class CustomerRepoTest {
 
         Customer c4 = customerRepo.queryByCustomerName("Dasun");
         System.out.println(c4.toString());
-
-//        Customer c5 = customerRepo.searchByName("Kasun");
-//        System.out.println(c5.toString());
 
         Customer c6 = customerRepo.streamByCustomerName("Kasun");
         System.out.println(c6.toString());
@@ -168,24 +168,24 @@ public class CustomerRepoTest {
 
     @Test
     public void textQueryFour(){
-        Customer customer = customerRepo.searchCustomerFromName("Kamal","Galle");
+        Customer customer = customerRepo.searchCustomerFromName("Ramal","Galle");
         System.out.println(customer.toString());
     }
 
- /*   @Test
+    @Test
     public void textQueryFive(){
-        Customer customer = customerRepo.searchCustomerFromNameWithNamedPara("Kamal","Galle");
+        Customer customer = customerRepo.searchCustomerFromName("Kamal","Galle");
         System.out.println(customer.toString());
     }
 
     @Test
     public void textQuerySix(){
-        Customer customer = customerRepo.getAllCustomersWithJPQLWithParams("C001");
+        Customer customer = customerRepo.getByCustomerId("C001");
         System.out.println(customer.toString());
     }
 
 
-    @Test
+    /*@Test
     public void checkPageableFeatures(){
         //page - page number, starts with 0
         //size - count of records for a page

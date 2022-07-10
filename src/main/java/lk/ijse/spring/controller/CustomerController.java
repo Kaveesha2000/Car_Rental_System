@@ -29,14 +29,14 @@ public class CustomerController {
         return new ResponseUtil(200,"Updated",null);
     }
 
-    @DeleteMapping(params = {"id"},produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil deleteCustomer(@RequestParam String id){
-        customerService.deleteCustomer(id);
+    @DeleteMapping(params = {"customerId"},produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil deleteCustomer(@RequestParam String customerId){
+        customerService.deleteCustomer(customerId);
         return new ResponseUtil(200,"Deleted",null);
     }
 
-    @GetMapping(path = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil searchCustomer(@PathVariable String id){
-        return new ResponseUtil(200,"Ok",customerService.searchCustomer(id));
+    @GetMapping(path = "/{customerId}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil searchCustomer(@PathVariable String customerId){
+        return new ResponseUtil(200,"Ok",customerService.searchCustomer(customerId));
     }
 }

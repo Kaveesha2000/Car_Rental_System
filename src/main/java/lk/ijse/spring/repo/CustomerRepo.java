@@ -23,7 +23,7 @@ public interface CustomerRepo extends JpaRepository<Customer,String> {
 
     Customer readByCustomerName(String customerName);
 
-    Customer getByCustomerName(String customerName);
+    Customer getByCustomerId(String customerId);
 
     Customer queryByCustomerName(String customerName);
 
@@ -34,7 +34,7 @@ public interface CustomerRepo extends JpaRepository<Customer,String> {
 
     //If the query has more than one result you have
     //to change the method return type to list
-    List<Customer> searchByName(String customerName);
+    List<Customer> searchByCustomerName(String customerName);
 
 
     //test countBy
