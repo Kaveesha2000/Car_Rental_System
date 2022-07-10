@@ -11,36 +11,36 @@ import java.util.List;
 public interface CustomerRepo extends JpaRepository<Customer,String> {
 
     //query methods
-    Customer findCustomerByName(String name);
+    Customer findCustomerByCustomerName(String customerName);
 
-    Customer findCustomerByAddress(String address);
+    Customer findCustomerByCustomerAddress(String customerAddress);
 
-    Customer findCustomerByNameAndAddress(String name, String address);
+    Customer findCustomerByCustomerNameAndCustomerAddress(String customerName, String customerAddress);
 
-    Customer findByName(String name);
+    Customer findByCustomerName(String customerName);
 
-    Customer readByName(String name);
+    Customer readByCustomerName(String customerName);
 
-    Customer getByName(String name);
+    Customer getByCustomerName(String customerName);
 
-    Customer queryByName(String name);
+    Customer queryByCustomerName(String customerName);
 
     //Customer searchByName(String name);
 
     // If there is only one record you can set the return type as follow
-    Customer streamByName(String name);
+    Customer streamByCustomerName(String customerName);
 
     //If the query has more than one result you have
     //to change the method return type to list
-    List<Customer> searchByName(String name);
+    List<Customer> searchByName(String customerName);
 
 
     //test countBy
-    long countByName(String name);
+    long countByCustomerName(String customerName);
 
 
     //test existBy
-    boolean existsByNameAndAddress(String name, String address);
+    boolean existsByCustomerNameAndCustomerAddress(String customerName, String customerAddress);
 
 
     //native sql
@@ -48,14 +48,14 @@ public interface CustomerRepo extends JpaRepository<Customer,String> {
     List<Customer> getAllCustomers();
 
 
-    //JPQL = Java Persistence Query Language
+   /* //JPQL = Java Persistence Query Language
     @Query(value = "select c from Customer c")
     List<Customer> getAllCustomersWithJPQL();
 
 
     //HQL = Hibernate Query Language
     @Query(value = "from Customer c")
-    List<Customer> getAllCustomersWithHQL(Pageable p);
+    List<Customer> getAllCustomersWithHQL(Pageable p);*/
 
 
     //Parameters
@@ -65,17 +65,17 @@ public interface CustomerRepo extends JpaRepository<Customer,String> {
 
     //native sql with params
     //positional params
-    @Query(value = "select * from Customer where name=?1 and address=?2", nativeQuery = true)
-    Customer searchCustomerFromName(String name, String address);
+    @Query(value = "select * from Customer where customerName=?1 and customerAddress=?2", nativeQuery = true)
+    Customer searchCustomerFromName(String customerName, String customerAddress);
 
-    //native sql with params
+    /*//native sql with params
     //named params
-    @Query(value = "select * from Customer where name=:name and address=:address", nativeQuery = true)
+    @Query(value = "select * from Customer where customerName=:name and customerAdderess=:address", nativeQuery = true)
     Customer searchCustomerFromNameWithNamedPara(@Param("name") String name, @Param("address") String address);
 
 
     //JPQL = Java Persistence Query Language
     @Query(value = "select c from Customer c where c.customerId=?1")
     Customer getAllCustomersWithJPQLWithParams(String id);
-
+*/
 }
