@@ -14,7 +14,6 @@ import javax.persistence.Id;
 @Data
 @ToString
 public class Schedule {
-
     @Id
     private String scheduleId;
     private String driverId;
@@ -23,5 +22,4 @@ public class Schedule {
     private String pickedTime;
     private String returnDate;
     private String releasedOrNot;
-
 }
