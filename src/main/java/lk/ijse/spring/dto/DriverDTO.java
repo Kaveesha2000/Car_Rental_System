@@ -17,4 +17,5 @@ public class DriverDTO {
     private String driverNIC;
     private String driverLicenseNo;
     private String driverPassword;
+    private String driverReleaseOrNot;
 }

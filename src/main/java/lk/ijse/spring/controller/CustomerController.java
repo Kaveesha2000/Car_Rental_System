@@ -40,6 +40,11 @@ public class CustomerController {
         return new ResponseUtil(200,"Ok",customerService.searchCustomer(customerId));
     }
 
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllCustomers(){
+        return new ResponseUtil(200,"Ok",customerService.getAllCustomers());
+    }
+
     @GetMapping(params = {"customerId"},produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil generateCustomerIds(@PathVariable String customerId){
         return new ResponseUtil(200,"Ok",customerService.generateCustomerIds());

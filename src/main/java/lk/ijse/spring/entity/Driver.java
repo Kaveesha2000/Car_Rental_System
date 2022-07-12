@@ -14,7 +14,6 @@ import javax.persistence.Id;
 @Data
 @ToString
 public class Driver {
-
     @Id
     private String driverId;
     private String driverName;
@@ -23,5 +22,5 @@ public class Driver {
     private String driverNIC;
     private String driverLicenseNo;
     private String driverPassword;
-
+    private String driverReleaseOrNot;
 }
