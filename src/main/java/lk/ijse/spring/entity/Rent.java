@@ -14,7 +14,6 @@ import javax.persistence.Id;
 @Data
 @ToString
 public class Rent {
-
     @Id
     private String paymentId;
     private double rentFee;
