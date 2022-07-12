@@ -10,8 +10,8 @@ import java.util.List;
 public interface CustomerRepo extends JpaRepository<Customer,String> {
 
     //native sql
-    @Query(value = "select * from Customer", nativeQuery = true)
-    List<Customer> getAllCustomers();
+    /*@Query(value = "select * from Customer", nativeQuery = true)
+    List<Customer> getAllCustomers();*/
 
     @Query(value = "SELECT customerId FROM Customer ORDER BY customerId DESC LIMIT 1", nativeQuery = true)
     String generateCustomerId();

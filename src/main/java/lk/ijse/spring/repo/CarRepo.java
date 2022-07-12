@@ -1,43 +1,51 @@
 package lk.ijse.spring.repo;
 
+import lk.ijse.spring.dto.CarDTO;
 import lk.ijse.spring.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
 public interface CarRepo extends JpaRepository<Car,String> {
-//    Car findCarByBrand(String brand);
-//
-//    Car findCarByDriverAddress(String customerAddress);
-//
-//    Car findCustomerByDriverNameAndDriverAddress(String customerName, String customerAddress);
-//
-//    Car findByDriverName(String customerName);
-//
-//    Car readByDriverName(String customerName);
-//
-//    Car getByDriverName(String customerName);
-//
-//    Car queryByDriverName(String customerName);
-//
-//    Car streamByDriverName(String customerName);
-//
-//    List<Car> searchByName(String customerName);
-//
-//
-//    //test countBy
-//    long countByDriverName(String customerName);
-//
-//
-//    //test existBy
-//    boolean existsByDriverNameAndDriverAddress(String customerName, String customerAddress);
-//
-//
-//    //native sql
-//    @Query(value = "select * from Car", nativeQuery = true)
-//    List<Car> getAllDriver();
-//
-//    /*@Query(value = "select * from Car where carBrand=?1 and driverAddress=?2", nativeQuery = true)
-//    Car searchDriverFromName(String driverName, String driverAddress);*/
+
+    @Query(value = "SELECT carId FROM Car ORDER BY carId DESC LIMIT 1", nativeQuery = true)
+    String generateCarId();
+
+    @Query(value = "SELECT COUNT(*) FROM Car WHERE availableOrNot=:availableOrNot", nativeQuery = true)
+    int registeredCarCount(@Param("availableOrNot") String availableOrNot);
+
+    @Query(value = "SELECT COUNT(*) FROM Car WHERE underMaintainanceOrNot=:underMaintainanceOrNot", nativeQuery = true)
+    int underMaintainanceOrNot(@Param("underMaintainanceOrNot") String underMaintainanceOrNot);
+
+    @Query(value = "SELECT * FROM Car ORDER BY noOfPassengers ASC", nativeQuery = true)
+    List<CarDTO> sortByNoOfPassengersByAsc();
+
+    @Query(value = "SELECT * FROM Car ORDER BY noOfPassengers DESC", nativeQuery = true)
+    List<CarDTO> sortByNoOfPassengersByDsc();
+
+    @Query(value = "SELECT * FROM Car ORDER BY monthlyRatePrice ASC", nativeQuery = true)
+    List<CarDTO> sortByMonthlyRatePriceByAsc();
+
+    @Query(value = "SELECT * FROM Car ORDER BY monthlyRatePrice DESC", nativeQuery = true)
+    List<CarDTO> sortByMonthlyRatePriceByDsc();
+
+    @Query(value = "SELECT * FROM Car ORDER BY dailyRatePrice ASC", nativeQuery = true)
+    List<CarDTO> sortByDailyRatePriceByAsc();
+
+    @Query(value = "SELECT * FROM Car ORDER BY dailyRatePrice DESC", nativeQuery = true)
+    List<CarDTO> sortByDailyRatePriceByDsc();
+
+    @Query(value = "SELECT * FROM Car WHERE transmissionType=:transmissionType", nativeQuery = true)
+    List<CarDTO> sortByTransmissionType(@Param("transmissionType") String transmissionType);
+
+    @Query(value = "SELECT * FROM Car WHERE brand=:brand", nativeQuery = true)
+    List<CarDTO> sortByBrand(@Param("brand") String brand);
+
+    @Query(value = "SELECT * FROM Car WHERE carType", nativeQuery = true)
+    List<CarDTO> sortByType(@Param("carType") String carType);
+
+    @Query(value = "SELECT * FROM Car ORDER BY fuelType", nativeQuery = true)
+    List<CarDTO> sortByFuelType(@Param("fuelType") String fuelType);
 }

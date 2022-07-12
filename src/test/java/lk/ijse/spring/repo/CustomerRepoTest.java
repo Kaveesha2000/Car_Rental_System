@@ -20,7 +20,7 @@ import java.util.Optional;
 @Transactional
 public class CustomerRepoTest {
 
-    @Autowired
+ /*   @Autowired
     CustomerRepo customerRepo;
 
     public void addCustomers(){
@@ -77,7 +77,7 @@ public class CustomerRepoTest {
     public void testDTO(){
         CustomerDTO customerDTO = new CustomerDTO("","","","04152663301","","","","");
         System.out.println(customerDTO);
-    }
+    }*/
 
    /* @Test
     public void searchCustomerByName(){
@@ -140,13 +140,13 @@ public class CustomerRepoTest {
         System.out.println(b);
     }*/
 
-    @Test
+   /* @Test
     public void textQueryOne(){
         List<Customer> allCustomers = customerRepo.getAllCustomers();
         allCustomers.forEach(v->{
             System.out.println(v.toString());
         });
-    }
+    }*/
 
    /* @Test
     public void textQueryTwo(){

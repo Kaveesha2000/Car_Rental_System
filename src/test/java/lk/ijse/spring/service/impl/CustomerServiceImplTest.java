@@ -28,7 +28,8 @@ public class CustomerServiceImplTest {
     //add One Customer for testing
     public CustomerDTO addOneCustomer() {
         //If it is a new Customer It should added to the database
-        return new CustomerDTO("C001","Dasun","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
+        //return new CustomerDTO("C001","Dasun","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
+        return null;
     }
 
     @Test
@@ -37,12 +38,12 @@ public class CustomerServiceImplTest {
        /* CustomerDTO c1 = new CustomerDTO("C001","Dasun","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
         CustomerDTO c2 = new CustomerDTO("C002","Kasun","Panadura","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
         CustomerDTO c3 = new CustomerDTO("C003","Ramal","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");*/
-        CustomerDTO c4 = new CustomerDTO("C004","Supun","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
+        //CustomerDTO c4 = new CustomerDTO("C004","Supun","Galle","0775263246","552224111210","CD5241","hjajsh@gmail.com","Dasu344444");
 
         /*customerService.saveCustomer(c1);
         customerService.saveCustomer(c2);
         customerService.saveCustomer(c3);*/
-        customerService.saveCustomer(c4);
+        //customerService.saveCustomer(c4);
 
     }
 
@@ -86,7 +87,7 @@ public class CustomerServiceImplTest {
 
     }
 
-    @Test
+    /*@Test
     void updateCustomer() {
         //Add multiple customers
         addCustomers();
@@ -104,7 +105,7 @@ public class CustomerServiceImplTest {
 
 
 
-    }
+    }*/
 
     @Test
     void searchCustomer() {

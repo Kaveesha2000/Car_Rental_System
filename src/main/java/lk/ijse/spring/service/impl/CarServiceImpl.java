@@ -63,4 +63,79 @@ public class CarServiceImpl implements CarService{
         return mapper.map(repo.findAll(), new TypeToken<List<CarDTO>>() {
         }.getType());
     }
+
+    @Override
+    public String generateCarIds() {
+        return repo.generateCarId();
+    }
+
+    @Override
+    public int availableCount(String availableOrNot) {
+        return repo.registeredCarCount(availableOrNot);
+    }
+
+    @Override
+    public int reserveCount(String availableOrNot) {
+        return repo.registeredCarCount(availableOrNot);
+    }
+
+    @Override
+    public int needMaintainceCount(String underMaintainanceOrNot) {
+        return repo.underMaintainanceOrNot(underMaintainanceOrNot);
+    }
+
+    @Override
+    public int underMaintainceCount(String underMaintainanceOrNot) {
+        return repo.underMaintainanceOrNot(underMaintainanceOrNot);
+    }
+
+    @Override
+    public List<CarDTO> sortByNoOfPassengersByAsc() {
+        return repo.sortByNoOfPassengersByAsc();
+    }
+
+    @Override
+    public List<CarDTO> sortByNoOfPassengersByDsc() {
+        return repo.sortByNoOfPassengersByDsc();
+    }
+
+    @Override
+    public List<CarDTO> sortByMonthlyRatePriceByAsc() {
+        return repo.sortByMonthlyRatePriceByAsc();
+    }
+
+    @Override
+    public List<CarDTO> sortByMonthlyRatePriceByDsc() {
+        return repo.sortByMonthlyRatePriceByDsc();
+    }
+
+    @Override
+    public List<CarDTO> sortByDailyRatePriceByAsc() {
+        return repo.sortByDailyRatePriceByAsc();
+    }
+
+    @Override
+    public List<CarDTO> sortByDailyRatePriceByDsc() {
+        return repo.sortByDailyRatePriceByDsc();
+    }
+
+    @Override
+    public List<CarDTO> sortByTransmissionType(String transmissionType) {
+        return repo.sortByTransmissionType(transmissionType);
+    }
+
+    @Override
+    public List<CarDTO> sortByBrand(String brand) {
+        return repo.sortByBrand(brand);
+    }
+
+    @Override
+    public List<CarDTO> sortByType(String type) {
+        return repo.sortByType(type);
+    }
+
+    @Override
+    public List<CarDTO> sortByFuelType(String fuelType) {
+        return repo.sortByFuelType(fuelType);
+    }
 }

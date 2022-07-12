@@ -14,7 +14,7 @@ public class CarDTO {
     private String registerNo;
     private String transmissionType;
     private String color;
-    private String type;
+    private String carType;
     private String brand;
     private String fuelType;
     private double price;
@@ -24,7 +24,7 @@ public class CarDTO {
     private double dailyRatePrice;
     private double monthlyRatePrice;
     private String availableOrNot;
-    private boolean underMaintainanceOrNot;
+    private String underMaintainanceOrNot;
     private String frontView;
     private String backView;
     private String sideView;
