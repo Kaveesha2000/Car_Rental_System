@@ -24,5 +24,6 @@ public class Customer {
     private String customerLicenseNo;
     private String customerEmail;
     private String customerNewPassword;
+    private String customerRegisteredDate;
 
 }

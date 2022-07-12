@@ -79,7 +79,7 @@ public class CustomerRepoTest {
         System.out.println(customerDTO);
     }
 
-    @Test
+   /* @Test
     public void searchCustomerByName(){
         Customer c1 = customerRepo.findByCustomerName("Kasun");
         Customer c2 = customerRepo.findByCustomerName("Kasun");
@@ -138,7 +138,7 @@ public class CustomerRepoTest {
     public void testExistBy(){
         boolean b = customerRepo.existsByCustomerNameAndCustomerAddress("Kamal", "Galle");
         System.out.println(b);
-    }
+    }*/
 
     @Test
     public void textQueryOne(){
@@ -166,7 +166,7 @@ public class CustomerRepoTest {
         });
     }*/
 
-    @Test
+    /*@Test
     public void textQueryFour(){
         Customer customer = customerRepo.searchCustomerFromName("Ramal","Galle");
         System.out.println(customer.toString());
@@ -182,7 +182,7 @@ public class CustomerRepoTest {
     public void textQuerySix(){
         Customer customer = customerRepo.getByCustomerId("C001");
         System.out.println(customer.toString());
-    }
+    }*/
 
 
     /*@Test

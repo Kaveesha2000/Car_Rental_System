@@ -18,4 +18,5 @@ public class CustomerDTO {
     private String customerLicenseNo;
     private String customerEmail;
     private String customerNewPassword;
+    private String customerRegisteredDate;
 }

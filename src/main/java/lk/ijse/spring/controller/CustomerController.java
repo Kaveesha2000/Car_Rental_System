@@ -39,4 +39,19 @@ public class CustomerController {
     public ResponseUtil searchCustomer(@PathVariable String customerId){
         return new ResponseUtil(200,"Ok",customerService.searchCustomer(customerId));
     }
+
+    @GetMapping(params = {"customerId"},produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil generateCustomerIds(@PathVariable String customerId){
+        return new ResponseUtil(200,"Ok",customerService.generateCustomerIds());
+    }
+
+    @GetMapping(path = "/Count/{wholeCustomerCount}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil wholeRegisteredCustomerCount(@PathVariable String wholeCustomerCount){
+        return new ResponseUtil(200,"Ok",customerService.wholeRegisteredCustomerCount());
+    }
+
+    @GetMapping(path = "/Count/{dailyCustomerCount}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil dailyRegisteredCustomerCount(@PathVariable String dailyCustomerCount){
+        return new ResponseUtil(200,"Ok",customerService.dailyRegisteredCustomerCount(dailyCustomerCount));
+    }
 }

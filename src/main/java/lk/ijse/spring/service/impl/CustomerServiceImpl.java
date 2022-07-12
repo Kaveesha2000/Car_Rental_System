@@ -63,4 +63,19 @@ public class CustomerServiceImpl implements CustomerService {
         return mapper.map(repo.findAll(), new TypeToken<List<CustomerDTO>>() {
         }.getType());
     }
+
+    @Override
+    public String generateCustomerIds() {
+        return repo.generateCustomerId();
+    }
+
+    @Override
+    public int wholeRegisteredCustomerCount() {
+        return repo.registeredCustomerCount();
+    }
+
+    @Override
+    public int dailyRegisteredCustomerCount(String customerRegisteredDate) {
+        return repo.dailyRegisteredCustomerCount(customerRegisteredDate);
+    }
 }

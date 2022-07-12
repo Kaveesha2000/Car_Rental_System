@@ -10,4 +10,7 @@ public interface CustomerService {
     void updateCustomer(CustomerDTO dto);
     CustomerDTO searchCustomer(String id);
     List<CustomerDTO> getAllCustomers();
+    String generateCustomerIds();
+    int wholeRegisteredCustomerCount();
+    int dailyRegisteredCustomerCount(String customerRegisteredDate);
 }
