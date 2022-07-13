@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -14,9 +14,9 @@ import javax.persistence.Id;
 @Data
 @ToString
 public class Reserve {
-
     @Id
     private String reserveId;
+    private String bookingDate;
     private String pickedDate;
     private String pickedTime;
     private String returnDate;
@@ -25,4 +25,10 @@ public class Reserve {
     private boolean driverWantOrNot;
     private String acceptOrDeny;
 
+    @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
+    @JoinColumn(name = "customerId", referencedColumnName = "customerId", nullable = false)
+    private Customer customer;
+
+    @OneToMany(mappedBy = "reserve",cascade = CascadeType.ALL)
+    private List<ReserveDetail> reserveDetail;
 }
