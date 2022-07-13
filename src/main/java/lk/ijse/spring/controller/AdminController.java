@@ -34,4 +34,9 @@ public class AdminController {
         return new ResponseUtil(200,"Ok",adminService.searchAdmin(adminId));
     }
 
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getAllAdmins(){
+        return new ResponseUtil(200,"Ok",adminService.getAllAdmin());
+    }
+
 }
