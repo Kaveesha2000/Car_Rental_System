@@ -1,8 +1,6 @@
 package lk.ijse.spring.controller;
 
-import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.RentDTO;
-import lk.ijse.spring.service.CustomerService;
 import lk.ijse.spring.service.RentService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +37,15 @@ public class RentController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getAllRent(){
         return new ResponseUtil(200,"Ok",rentService.getAllRent());
+    }
+
+    @GetMapping(path = "/{dailyIncome}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getDailyIncome(@PathVariable String rentDate){
+        return new ResponseUtil(200,"Ok",rentService.dailyIncome(rentDate));
+    }
+
+    @GetMapping(path = "/{firstRentDate}/{lastRentDate}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil getIncome(@PathVariable String firstRentDate,@PathVariable String lastRentDate){
+        return new ResponseUtil(200,"Ok",rentService.income(firstRentDate,lastRentDate));
     }
 }

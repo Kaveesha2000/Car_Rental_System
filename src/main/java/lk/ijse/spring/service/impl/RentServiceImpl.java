@@ -57,4 +57,14 @@ public class RentServiceImpl implements RentService{
         return mapper.map(repo.findAll(), new TypeToken<List<RentDTO>>() {
         }.getType());
     }
+
+    @Override
+    public double dailyIncome(String rentDate) {
+        return repo.dailyIncome(rentDate);
+    }
+
+    @Override
+    public double income(String firstRentDate, String lastRentDate) {
+        return repo.income(firstRentDate,lastRentDate);
+    }
 }
