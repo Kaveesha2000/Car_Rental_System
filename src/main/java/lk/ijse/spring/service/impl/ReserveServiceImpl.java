@@ -2,9 +2,8 @@ package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.dto.ReserveDTO;
-import lk.ijse.spring.entity.Customer;
-import lk.ijse.spring.entity.Reserve;
-import lk.ijse.spring.repo.ReserveRepo;
+import lk.ijse.spring.entity.*;
+import lk.ijse.spring.repo.*;
 import lk.ijse.spring.service.ReserveService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -19,33 +18,88 @@ import java.util.List;
 public class ReserveServiceImpl implements ReserveService {
 
     @Autowired
-    private ReserveRepo repo;
+    private ReserveRepo reserveRepo;
 
     @Autowired
-    private ModelMapper mapper;
+    private ReserveDetailRepo reserveDetailsRepo;
+
+    @Autowired
+    private CarRepo carRepo;
+
+    @Autowired
+    private DriverRepo driverRepo;
+
+    @Autowired
+    private ScheduleRepo scheduleRepo;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Override
     public void reserve(ReserveDTO dto) {
-        if (!repo.existsById(dto.getReserveId())) {
-            repo.save(mapper.map(dto, Reserve.class));
+        Reserve reserve = modelMapper.map(dto, Reserve.class);
+        if (!reserveRepo.existsById(dto.getReserveId())){
+
+            if (dto.getReserveDetailDTOList().size() < 1){
+                throw new RuntimeException("No Selected Cars In Reservation..!");
+            }else {
+                reserveRepo.save(reserve);
+
+                for (ReserveDetail reserveDetails : reserve.getReserveDetail()) {
+                    Car car = carRepo.findById(reserveDetails.getCarId()).get();
+                    Driver driver = driverRepo.findById(reserveDetails.getDriverId()).get();
+                    carRepo.carAvailableOrNot("Not Available",car.getCarId()) ;
+                    driverRepo.updateDriverIfHeReleaseOrNot("NO", reserveDetails.getDriverId());
+
+                    Schedule rd = new Schedule(
+                            scheduleRepo.generateScheduleId(),
+                            reserve.getPickedDate(),
+                            reserve.getPickedTime(),
+                            reserve.getReturnDate(),
+                            driver.getDriverReleaseOrNot(),
+                            reserveDetails
+                    );
+                    scheduleRepo.save(rd);
+                }
+            }
         }else {
-            throw new RuntimeException("Reserve Already Exist...!");
+            throw  new RuntimeException(dto.getReserveId()+" "+"Reservation Already Exist..!");
         }
     }
 
     @Override
     public void updateReserve(ReserveDTO dto) {
-        if (repo.existsById(dto.getReserveId())){
-            repo.save(mapper.map(dto,Reserve.class));
-        }else {
-            throw new RuntimeException("No such reserve. Try again...!");
+        Reserve reserve = modelMapper.map(dto, Reserve.class);
+
+        if (reserveRepo.existsById(dto.getReserveId())){
+            Reserve referenceById= reserveRepo.findById(dto.getReserveId()).get();
+            for (ReserveDetail reserveDetail : referenceById.getReserveDetail()) {
+                driverRepo.updateDriverIfHeReleaseOrNot("Release",reserveDetail.getDriverId());
+            }
+        }
+        if (reserveRepo.existsById(reserve.getReserveId())){
+            reserveRepo.save(reserve);
+            for (ReserveDetail reserveDetails : reserve.getReserveDetail()) {
+                driverRepo.updateDriverIfHeReleaseOrNot("Not Release", reserveDetails.getDriverId());
+                Driver driver = driverRepo.findById(reserveDetails.getDriverId()).get();
+
+                Schedule rd = new Schedule(
+                        scheduleRepo.generateScheduleId(),
+                        reserve.getPickedDate(),
+                        reserve.getPickedTime(),
+                        reserve.getReturnDate(),
+                        driver.getDriverReleaseOrNot(),
+                        reserveDetails
+                );
+                scheduleRepo.save(rd);
+            }
         }
     }
 
     @Override
     public ReserveDTO searchReserve(String id) {
-        if (repo.existsById(id)){
-            return mapper.map(repo.findById(id).get(), ReserveDTO.class);
+        if (reserveRepo.existsById(id)){
+            return modelMapper.map(reserveRepo.findById(id).get(), ReserveDTO.class);
         }else {
             throw new RuntimeException("No reserve for the id "+id+". Try again...!");
         }
@@ -53,22 +107,22 @@ public class ReserveServiceImpl implements ReserveService {
 
     @Override
     public List<ReserveDTO> getAllReserve() {
-        return mapper.map(repo.findAll(), new TypeToken<List<ReserveDTO>>() {
+        return modelMapper.map(reserveRepo.findAll(), new TypeToken<List<ReserveDTO>>() {
         }.getType());
     }
 
     @Override
     public String generateReserveId() {
-        return repo.generateReserveId();
+        return reserveRepo.generateReserveId();
     }
 
     @Override
     public int countDailyReservation(String bookingDate) {
-        return repo.countDailyReservations(bookingDate);
+        return reserveRepo.countDailyReservations(bookingDate);
     }
 
     @Override
     public int activeReservationsPerDay(String acceptedRequests) {
-        return repo.activeReservationPerDay(acceptedRequests);
+        return reserveRepo.activeReservationPerDay(acceptedRequests);
     }
 }

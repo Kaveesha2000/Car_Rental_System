@@ -11,10 +11,10 @@ import lombok.ToString;
 @ToString
 public class ScheduleDTO {
     private String scheduleId;
-    private String driverId;
-    private String carId;
     private String pickedDate;
     private String pickedTime;
     private String returnDate;
     private String releasedOrNot;
+
+    private ReserveDetailDTO reserveDetails;
 }

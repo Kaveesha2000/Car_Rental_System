@@ -19,6 +19,9 @@ public interface CarRepo extends JpaRepository<Car,String> {
     @Query(value = "SELECT COUNT(*) FROM Car WHERE underMaintainanceOrNot=:underMaintainanceOrNot", nativeQuery = true)
     int underMaintainanceOrNot(@Param("underMaintainanceOrNot") String underMaintainanceOrNot);
 
+    @Query(value = "UPDATE Car SET availableOrNot=:available WHERE carId=:carId", nativeQuery = true)
+    String carAvailableOrNot(@Param("available") String available, @Param("carId") String carId);
+
     @Query(value = "SELECT * FROM Car ORDER BY noOfPassengers ASC", nativeQuery = true)
     List<CarDTO> sortByNoOfPassengersByAsc();
 
