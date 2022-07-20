@@ -60,6 +60,13 @@
     margin-left: 4vw;
     list-style: none;
 }
+#sideNavUl>li{
+    padding-top: 25px;
+    font-weight: bold;
+}
+#midContainer{
+
+}
 .dropdown-main{
     display: flex;
     flex-direction: column;
