@@ -39,55 +39,106 @@
 .navbar-dark .navbar-nav .nav-link.active {
     color: var(--primary);
 }
+
 /*--------------------------Admin Section-----------------------------------*/
-#adminSection{
+#dashboard-Header {
+    padding: 25px;
+    font-family: fantasy;
+    color: rgb(108, 117, 125);
+}
+
+#adminSection {
     position: absolute;
-    width: 100%;
-    height: 100%;
     background-color: black;
 }
-#sideNav{
+
+#sideNav {
     position: relative;
     width: 15%;
     height: 100%;
     background-color: #F4F5F8;
 }
-#sideNavUl{
+
+#sideNavUl {
     position: relative;
-    padding: 10px;
+    padding: 5px;
     font-size: 20px;
     font-family: "Times New Roman";
     margin-left: 4vw;
     list-style: none;
+    margin-top: -40px;
 }
-#sideNavUl>li{
+
+#sideNavUl > li {
     padding-top: 25px;
     font-weight: bold;
 }
-#midContainer{
 
+#midContainer {
+    position: relative;
+    border: 2px solid white;
 }
-.dropdown-main{
+
+#midContainer > div {
+    position: relative;
+    width: 20%;
+    height: 20%;
+    border: 2px solid white;
+}
+
+/*--------------------------------------------------------------*/
+.dropdown-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.dropdown-main button{
+
+.dropdown-main button {
     font-weight: 500;
     letter-spacing: 1.5px;
 }
-.dropdown-main button:hover{
-    border-color: rgb(108,117,125);
+
+.dropdown-main button:hover {
+    border-color: rgb(108, 117, 125);
     outline: none;
     color: #F77D0A;
-    background-color: rgb(108,117,125);
+    background-color: rgb(108, 117, 125);
 }
-.dropdown-main button:focus{
-    border-color: rgb(108,117,125);
+
+.dropdown-main button:focus {
+    border-color: rgb(108, 117, 125);
     outline: none;
     color: #F77D0A;
-    background-color: rgb(108,117,125);
+    background-color: rgb(108, 117, 125);
     box-shadow: none;
     text-decoration: none;
     stroke: none;
 }
+/*--------------------------------------------Car Section----------------------------------------*/
+#carSection{
+    position: relative;
+    margin-top: 100vh;
+}
+#buttonPanel1{
+    position: relative;
+    margin-top: -7vh;
+    margin-right: 3vh;
+}
+#carHeader{
+    color: #485460;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Driver Section----------------------------------------*/
+#driverSection{
+    position: relative;
+}
+#buttonPanel2{
+    position: relative;
+    margin-top: -8vh;
+    margin-right: 3vh;
+}
+#driverHeader{
+    color: #485460;
+}
+/*-----------------------------------------------------------------------------------------------*/
+

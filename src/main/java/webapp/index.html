@@ -7,45 +7,11 @@
     <link href="assets/style.css" rel="stylesheet">
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" rel="stylesheet">
 </head>
 <body>
 <!----------------------------------------nav bar---------------------------------------------->
-<!--<nav class="navbar navbar-expand-lg navbar navbar-dark bg-info text-center">
-    <div class="container-fluid">
-        <img alt="" class="d-inline-block align-text-top" src="assets/images/car_logo.jpg" height="24"width="30">
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav text-center">
-                <li class="nav-item" id="homeBtn" style="font-family: cursive; font-weight: bold; cursor: pointer;">
-                    <a aria-current="page" class="nav-link active">Home</a>
-                </li>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="font-family: cursive; font-weight: bold; cursor:pointer;">
-                        Login
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="font-family: cursive; font-weight: bold; cursor:pointer;">
-                        <li><a class="dropdown-item" href="#">Admin</a></li>
-
-                        <li><a class="dropdown-item" href="#">Driver</a></li>
-                        <li><a class="dropdown-item"  href="#">Customer</a></li>
-                    </ul>
-                </div>
-                <li class="nav-item" id="carBtn" style="font-family: cursive; font-weight: bold; cursor:pointer;">
-                    <a class="nav-link">Car</a>
-                </li>
-                <li class="nav-item" id="reserveBtn"
-                    style="font-family: cursive; font-weight: bold; cursor:pointer;">
-                    <a class="nav-link">Reservation</a>
-                </li>
-                <li class="nav-item" id="paymentBtn"
-                    style="font-family: cursive; font-weight: bold; cursor:pointer;">
-                    <a class="nav-link">Payment</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>-->
 <!-- Topbar Start -->
 <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
     <div class="row">
@@ -58,18 +24,20 @@
 <div class="container-fluid position-relative nav-bar p-0">
     <div class="position-relative px-lg-5" style="z-index: 9;">
         <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-            <a href="index.html" class="navbar-brand">
+            <a class="navbar-brand" href="index.html">
                 <h1 class="text-uppercase text-black mb-1 m-lg-2">Easy Car Rentals</h1>
             </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <button class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="#" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">About</a>
+                    <a class="nav-item nav-link active" href="#">Home</a>
+                    <a class="nav-item nav-link" href="#">About</a>
                     <div class="dropdown dropdown-main">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button aria-expanded="false" class="btn btn-secondary dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                type="button">
                             LOGIN
                         </button>
                         <ul class="dropdown-menu">
@@ -79,16 +47,18 @@
                         </ul>
                     </div>
                     <div class="dropdown dropdown-main">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button aria-expanded="false" class="btn btn-secondary dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                type="button">
                             CARS
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Manage</a></li>
                         </ul>
                     </div>
-                    <a href="#" class="nav-item nav-link">Reserve</a>
-                    <a href="#" class="nav-item nav-link">Payment</a>
-                    <a href="#" class="nav-item nav-link">Contact</a>
+                    <a class="nav-item nav-link" href="#">Reserve</a>
+                    <a class="nav-item nav-link" href="#">Payment</a>
+                    <a class="nav-item nav-link" href="#">Contact</a>
                 </div>
             </div>
         </nav>
@@ -98,12 +68,16 @@
 <!-- Navbar End -->
 <!--------------------------------------1.Login Section---------------------------------------->
 <!-------------------------------------2.Dashboard Section------------------------------------->
+<section id="dashboardSection" style="width: 100%; height: 100%">
+
+</section>
 <!-----mekedi sections kadala ewta adala widiyata count eka pennanna meda div eke. side nav ekkin option denna------>
 <!--------------------------------------3.Admin Section (CRUD)--------------------------------->
-<section id="adminSection">
+<section id="adminSection" style="width: 100%; height: 100%">
 
     <!--side bar-->
     <div id="sideNav">
+        <h2 id="dashboard-Header">Dashboard</h2>
         <ul id="sideNavUl">
             <li><a href="#">Admin</a></li>
             <li><a href="#">Driver</a></li>
@@ -114,19 +88,254 @@
     </div>
 
     <!--middle content-->
-    <div id="midContainer">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    <!--<div id="midContainer" class="container-fluid">
+
+        <div class="row justify-content-center">
+            &lt;!&ndash;Available Driver Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+            &lt;!&ndash;Unavailable Driver Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+            &lt;!&ndash;Available Car Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+            &lt;!&ndash;Unavailable Car Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+        </div>
+
+
+        <div class="row justify-content-center">
+            &lt;!&ndash;Registered Customer Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+            &lt;!&ndash;Daily Registered Customer Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+            &lt;!&ndash;Daily Reservation Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+            &lt;!&ndash;Active Reservation Count&ndash;&gt;
+            <div class="col-md-3">.col-md-4</div>
+        </div>
+
+    </div>-->
 
 </section>
 <!----------------------------------------4.Car Section (CRUD)--------------------------------->
+<section id="carSection" style="width: 85%; height: 100%">
+    <section>
+        <h1 class="text-center" id="carHeader">Car Manage</h1>
+    </section>
+    <section id="carSectionForm">
+        <form>
+            <section class="row" style="width: 100%; margin-left: 0.3vw">
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="carIdTextField" style="font-weight: bold">Car ID</label>
+                    <input aria-describedby="idHelp" class="form-control" id="carIdTextField" type="text">
+                    <div class="form-text" id="carId"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="registerIdTextField" style="font-weight: bold">Register ID</label>
+                    <input aria-describedby="idHelp" class="form-control" id="registerIdTextField" type="text">
+                    <div class="form-text" id="registerId"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" style="font-weight: bold;">No Of Passengers</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="colorTextField" style="font-weight: bold">Color</label>
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="colorTextField" type="text">
+                    <div class="form-text" id="color"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" style="font-weight: bold;">Type</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>None</option>
+                        <option value="1">Mini</option>
+                        <option value="2">Luxury</option>
+                    </select>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="wholeKmTextField" style="font-weight: bold">Whole Km</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="wholeKmTextField" type="text">
+                    <div class="form-text" id="wholeKm"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="brandTextField" style="font-weight: bold">Brand</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="brandTextField" type="text">
+                    <div class="form-text" id="brand"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" style="font-weight: bold;">Fuel Type</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>None</option>
+                        <option value="1">Petrol</option>
+                        <option value="2">Diesel</option>
+                    </select>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" style="font-weight: bold;">Transmission Type</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>None</option>
+                        <option value="1">Automatic</option>
+                        <option value="2">Manual</option>
+                    </select>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="dailyRatePricetextField" style="font-weight: bold">Daily Rate Price</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="dailyRatePricetextField" type="text">
+                    <div class="form-text" id="dailyRatePrice"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="monthlyRatePricetextField" style="font-weight: bold">Monthly Rate
+                        Price</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="monthlyRatePricetextField" type="text">
+                    <div class="form-text" id="monthlyRatePrice"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="frontView"  style="font-weight: bold">Front View</label>
+                    <input type="file" class="form-control" id="frontView" />
+                </div>
+
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="sideView"  style="font-weight: bold">Side View</label>
+                    <input type="file" class="form-control" id="sideView" />
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="backView"  style="font-weight: bold">Back View</label>
+                    <input type="file" class="form-control" id="backView" />
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="interiorView"  style="font-weight: bold">Interior View</label>
+                    <input type="file" class="form-control" id="interiorView" />
+                </div>
+            </section>
+        </form>
+    </section>
+
+    <!--button set and search bar-->
+    <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel1">
+        <button class="btn btn-success  btn-sm" id="carSaveBtn" type="button">+Add</button>
+        <button class="btn btn-warning  btn-sm" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" type="button">Delete</button>
+        <button class="btn btn-primary  btn-sm" type="button">Search</button>
+    </section>
+    <section>
+        <div class="mt-4" style="width: 98%; margin-left: 1vw">
+            <input aria-describedby="carSearchBarTextField" class="form-control" id="carSearchBarTextField" type="text">
+            <div class="form-text" id="carSearchBar"></div>
+        </div>
+
+    </section>
+    <!--table-->
+    <section>
+        <table class="table table-secondary table-striped mt-3">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact No</th>
+                <th scope="col">NIC</th>
+                <th scope="col">License No</th>
+                <th scope="col">Password</th>
+            </tr>
+            </thead>
+            <tbody id="tblCar">
+
+            </tbody>
+        </table>
+    </section>
+</section>
+
 <!----------------------------------------5.Car Section (view)--------------------------------->
 <!-----------------------------------6.Customer Section (CRUD)--------------------------------->
 <!-----------------------------------7.Customer Section (view)--------------------------------->
 <!-------------------------------------8.Driver Section (CRUD)--------------------------------->
+<section id="driverSection" style="width: 85%; height: 100%">
+    <section>
+        <h1 class="text-center" id="driverHeader">Driver Manage</h1>
+    </section>
+    <section id="driverSectionForm">
+        <form>
+            <section class="row" style="width: 100%; margin-left: 0.3vw">
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="driverIdTextField" style="font-weight: bold">Driver ID</label>
+                    <input aria-describedby="idHelp" class="form-control" id="driverIdTextField" type="text">
+                    <div class="form-text" id="driverId"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="nameTextField" style="font-weight: bold">Name</label>
+                    <input aria-describedby="nameHelp" class="form-control" id="nameTextField" type="text">
+                    <div class="form-text" id="name"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="addressTextField" style="font-weight: bold">Address</label>
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="addressTextField" type="text">
+                    <div class="form-text" id="address"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="contactNoTextField" style="font-weight: bold">Contact No</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="contactNoTextField" type="text">
+                    <div class="form-text" id="contactNo"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="nicTextField" style="font-weight: bold">NIC</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="nicTextField" type="text">
+                    <div class="form-text" id="nic"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="licenseNoTextField" style="font-weight: bold">License No</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="licenseNoTextField" type="text">
+                    <div class="form-text" id="licenseNo"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="passwordTextField" style="font-weight: bold">Password</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="passwordTextField" type="text">
+                    <div class="form-text" id="password"></div>
+                </div>
+            </section>
+        </form>
+    </section>
+
+    <!--button set and search bar-->
+    <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel2">
+        <button class="btn btn-success  btn-sm" id="driverSaveBtn" type="button">+Add</button>
+        <button class="btn btn-warning  btn-sm" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" type="button">Delete</button>
+        <button class="btn btn-primary  btn-sm" type="button">Search</button>
+    </section>
+    <section>
+        <div class="mt-4" style="width: 98%; margin-left: 1vw">
+            <input aria-describedby="driverSearchBarTextField" class="form-control" id="driverSearchBarTextField" type="text">
+            <div class="form-text" id="driverSearchBar"></div>
+        </div>
+
+    </section>
+    <!--table-->
+    <section>
+        <table class="table table-secondary table-striped mt-3">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact No</th>
+                <th scope="col">NIC</th>
+                <th scope="col">License No</th>
+                <th scope="col">Password</th>
+            </tr>
+            </thead>
+            <tbody id="tblCustomer">
+
+            </tbody>
+        </table>
+    </section>
+</section>
 <!-------------------------------------9.Driver Section (view)--------------------------------->
 <!----------------------------------10.Rent(Payment) Section----------------------------------->
 <!--------------------------------------11.Reserve Section------------------------------------->
@@ -136,6 +345,8 @@
 
 <!-------------------------------------Script section---------------------------------------->
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
