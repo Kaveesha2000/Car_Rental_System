@@ -67,6 +67,63 @@
 <!--..-->
 <!-- Navbar End -->
 <!--------------------------------------1.Login Section---------------------------------------->
+<section id="logInSection">
+    <div id="logInSectionDiv">
+        <form id="loginForm">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="form2Example1" class="form-control" />
+                <label class="form-label" for="form2Example1">Username</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="form2Example2" class="form-control" />
+                <label class="form-label" for="form2Example2">Password</label>
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                        <label class="form-check-label" for="form2Example34"> Remember me </label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!-- Simple link -->
+                    <a href="#!">Forgot password?</a>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4" id="signInBtn">Sign in</button>
+
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Not a member? <a href="#!">Register</a></p>
+                <p>or sign up with:</p>
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
 <!-------------------------------------2.Dashboard Section------------------------------------->
 <section id="dashboardSection" style="width: 100%; height: 100%">
 
@@ -80,8 +137,8 @@
         <h2 id="dashboard-Header">Dashboard</h2>
         <ul id="sideNavUl">
             <li><a href="#">Admin</a></li>
-            <li><a href="#">Driver</a></li>
-            <li><a href="#">Car</a></li>
+            <li><a href="#driverSection">Driver</a></li>
+            <li><a href="#carSection">Car</a></li>
             <li><a href="#">Schedule</a></li>
             <li><a href="#">Income</a></li>
         </ul>
@@ -116,7 +173,7 @@
     </div>-->
 
 </section>
-<!----------------------------------------4.Car Section (CRUD)--------------------------------->
+<!----------------------------------------4.Car Section (CRUD) done--------------------------------->
 <section id="carSection" style="width: 85%; height: 100%">
     <section>
         <h1 class="text-center" id="carHeader">Car Manage</h1>
@@ -233,16 +290,23 @@
     </section>
     <!--table-->
     <section>
-        <table class="table table-secondary table-striped mt-3">
+        <table class="table table-secondary table-striped mt-3 m-lg-2" style="width: 99%">
             <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Contact No</th>
-                <th scope="col">NIC</th>
-                <th scope="col">License No</th>
-                <th scope="col">Password</th>
+                <th scope="col">Car ID</th>
+                <th scope="col">Reg ID</th>
+                <th scope="col">Passenger Count</th>
+                <th scope="col">Color</th>
+                <th scope="col">Type</th>
+                <th scope="col">Whole Km</th>
+                <th scope="col">Fuel</th>
+                <th scope="col">Transmission</th>
+                <th scope="col">Daily Rate</th>
+                <th scope="col">Monthly Rate</th>
+                <th scope="col">Front View</th>
+                <th scope="col">Side View</th>
+                <th scope="col">Back View</th>
+                <th scope="col">Interior View</th>
             </tr>
             </thead>
             <tbody id="tblCar">
@@ -251,11 +315,9 @@
         </table>
     </section>
 </section>
-
-<!----------------------------------------5.Car Section (view)--------------------------------->
-<!-----------------------------------6.Customer Section (CRUD)--------------------------------->
-<!-----------------------------------7.Customer Section (view)--------------------------------->
-<!-------------------------------------8.Driver Section (CRUD)--------------------------------->
+<!-----------------------------------5.Customer Section (CRUD)--------------------------------->
+<!-----------------------------------6.Customer Section (view)--------------------------------->
+<!-------------------------------------7.Driver Section (CRUD) donex--------------------------------->
 <section id="driverSection" style="width: 85%; height: 100%">
     <section>
         <h1 class="text-center" id="driverHeader">Driver Manage</h1>
@@ -318,7 +380,7 @@
     </section>
     <!--table-->
     <section>
-        <table class="table table-secondary table-striped mt-3">
+        <table class="table table-secondary table-striped mt-3 m-lg-2" style="width: 99%">
             <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -336,12 +398,35 @@
         </table>
     </section>
 </section>
-<!-------------------------------------9.Driver Section (view)--------------------------------->
-<!----------------------------------10.Rent(Payment) Section----------------------------------->
-<!--------------------------------------11.Reserve Section------------------------------------->
-<!--------------------------------------12.Reserve Section (view)------------------------------>
-<!--------------------------------------13.Schedule Section------------------------------------>
-<!--------------------------------------14.Income Section-------------------------------------->
+<!----------------------------------8.Rent(Payment) Section------------------------------------>
+<!---------------------------------------9.Reserve Section------------------------------------->
+<!--------------------------------------10.Reserve Section (view)------------------------------>
+<!--------------------------------------11.Schedule Section------------------------------------>
+<section id="scheduuleSection" style="width: 85%; height: 100%">
+    <section>
+        <h1 class="text-center" id="scheduleHeader">Schedule</h1>
+        <h3 class="text-center" id="scheduleId">Schedule ID</h3>
+    </section>
+    <!--table-->
+    <section>
+        <table class="table table-secondary table-striped mt-3 m-lg-2" style="width: 99%">
+            <thead>
+            <tr>
+                <th scope="col">Driver ID</th>
+                <th scope="col">Car ID</th>
+                <th scope="col">Picked Time</th>
+                <th scope="col">Picked Date</th>
+                <th scope="col">Return Date</th>
+                <th scope="col">Release Or Not</th>
+            </tr>
+            </thead>
+            <tbody id="tblSchedule">
+
+            </tbody>
+        </table>
+    </section>
+</section>
+<!--------------------------------------12.Income Section-------------------------------------->
 
 <!-------------------------------------Script section---------------------------------------->
 <!-- JavaScript Bundle with Popper -->
