@@ -117,10 +117,7 @@
 /*------------------------------------------Login Section----------------------------------------*/
 #logInSectionDiv{
     position: relative;
-    width: 30%;
-    height: 50%;
     border: 2px solid black;
-    margin-left: 35%;
 }
 #loginForm{
     padding: 20px;
