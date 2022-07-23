@@ -9,8 +9,16 @@
     <!-- CSS only -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
+<!----------------------------------------Home Page-------------------------------------------->
+<section style="width: 100%; height: 100%" id="homePageSection">
+
+</section>
 <!----------------------------------------nav bar---------------------------------------------->
 <!-- Topbar Start -->
 <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
@@ -70,8 +78,9 @@
 <section id="logInSection" style="width: 30%; height: 50%; margin-left: 35%;">
     <div id="logInSectionDiv">
         <form id="loginForm">
+            <h2 class="text-center">Log In</h2>
             <!-- Email input -->
-            <div class="form-outline mb-4">
+            <div class="form-outline mb-4 mt-4">
                 <input class="form-control" id="form2Example1" type="email"/>
                 <label class="form-label" for="form2Example1">Username</label>
             </div>
@@ -125,14 +134,13 @@
     </div>
 </section>
 <!-------------------------------------2.Dashboard Section------------------------------------->
-<section class="container" id="dashboardSection">
-    <!--left side div --------------------------------------------------->
+<section id="dashboardSection" style="width: 100%; height: 100%">
     <div class="left-side">
 
         <!--button card ---------------------------------------------->
         <div class="btn-main-div">
             <div class="img-div">
-                <img alt="" class="btn-img" src="./assets/icons/home.png" style="width: 30px">
+                <img alt="" class="btn-img" src="./assets/icons/dash.png">
             </div>
 
             <div class="btn-div">
@@ -142,23 +150,21 @@
             </div>
 
         </div>
-
         <div class="btn-main-div">
             <div class="img-div">
-                <img alt="" class="btn-img" src="./assets/icons/home.png" style="width: 30px">
+                <img alt="" class="btn-img" src="./assets/icons/driver.png">
             </div>
 
             <div class="btn-div">
                 <button class="btn">
-                    Customer
+                    Driver
                 </button>
             </div>
 
         </div>
-
         <div class="btn-main-div">
             <div class="img-div">
-                <img alt="" class="btn-img" src="./assets/icons/home.png" style="width: 30px">
+                <img alt="" class="btn-img" src="./assets/icons/car.png">
             </div>
 
             <div class="btn-div">
@@ -168,33 +174,57 @@
             </div>
 
         </div>
-
         <div class="btn-main-div">
             <div class="img-div">
-                <img alt="" class="btn-img" src="./assets/icons/home.png" style="width: 30px">
+                <img alt="" class="btn-img" src="./assets/icons/schedule.png">
             </div>
 
             <div class="btn-div">
                 <button class="btn">
-                    Dashboard
+                    Schedule
                 </button>
             </div>
 
         </div>
-
         <div class="btn-main-div">
             <div class="img-div">
-                <img alt="" class="btn-img" src="./assets/icons/home.png" style="width: 30px">
+                <img alt="" class="btn-img" src="./assets/icons/income.png">
             </div>
 
             <div class="btn-div">
                 <button class="btn">
-                    Dashboard
+                    Income
                 </button>
             </div>
 
         </div>
+        <div class="btn-main-div">
+            <div class="img-div">
+                <img alt="" class="btn-img" src="./assets/icons/customer.png">
+            </div>
 
+            <div class="btn-div">
+                <button class="btn">
+                    Reservation View
+                </button>
+            </div>
+
+        </div>
+        <div class="btn-main-div">
+            <div class="img-div">
+                <img alt="" class="btn-img" src="./assets/icons/customer.png">
+            </div>
+
+            <div class="btn-div">
+                <button class="btn">
+                    Customer View
+                </button>
+            </div>
+
+        </div>
+        <div class="space-div">
+
+        </div>
 
     </div>
 
@@ -213,61 +243,61 @@
             <div class="card-main-div">
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h2 class="headers-of-dashboard">Register Customer Count </h2>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/users.png">
                         </div>
                     </div>
                 </div>
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h3 class="headers-of-dashboard">Available Car Count </h3>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/available-car.png">
                         </div>
                     </div>
                 </div>
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h3 class="headers-of-dashboard">Unavailable Car Count </h3>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/unva-car.png">
                         </div>
                     </div>
                 </div>
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h3 class="headers-of-dashboard">Available Driver Count </h3>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/driving.png">
                         </div>
                     </div>
                 </div>
@@ -275,132 +305,73 @@
             <div class="card-main-div">
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h3 class="headers-of-dashboard">Unavailable Driver Count </h3>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/unva-diver.png">
                         </div>
                     </div>
                 </div>
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h3 class="headers-of-dashboard">Daily Reservation Count </h3>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/30.png">
                         </div>
                     </div>
                 </div>
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h3 class="headers-of-dashboard">Weekly Reservation Count </h3>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/7.png">
                         </div>
                     </div>
                 </div>
                 <div class="dash-card">
                     <div class="card-title">
-                        <h2>Total Cars </h2>
+                        <h3 class="headers-of-dashboard">Monthly Reservation Count </h3>
                     </div>
                     <div class="card-count-img">
 
                         <div class="card-count">
-                            <h2>000</h2>
+                            <h2 class="headers-of-dashboard">000</h2>
                         </div>
 
                         <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
+                            <img alt="" class="card-icon" src="./assets/icons/12.png">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card-main-div">
-                <div class="dash-card">
-                    <div class="card-title">
-                        <h2>Total Cars </h2>
-                    </div>
-                    <div class="card-count-img">
 
-                        <div class="card-count">
-                            <h2>000</h2>
-                        </div>
-
-                        <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
-                        </div>
-                    </div>
-                </div>
-                <div class="dash-card">
-                    <div class="card-title">
-                        <h2>Total Cars </h2>
-                    </div>
-                    <div class="card-count-img">
-
-                        <div class="card-count">
-                            <h2>000</h2>
-                        </div>
-
-                        <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
-                        </div>
-                    </div>
-                </div>
-                <div class="dash-card">
-                    <div class="card-title">
-                        <h2>Total Cars </h2>
-                    </div>
-                    <div class="card-count-img">
-
-                        <div class="card-count">
-                            <h2>000</h2>
-                        </div>
-
-                        <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
-                        </div>
-                    </div>
-                </div>
-                <div class="dash-card">
-                    <div class="card-title">
-                        <h2>Total Cars </h2>
-                    </div>
-                    <div class="card-count-img">
-
-                        <div class="card-count">
-                            <h2>000</h2>
-                        </div>
-
-                        <div class="card-img">
-                            <img alt="" class="card-icon" src="./assets/icons/home.png" style="width: 30px">
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <!--bottom ---------------------------------------->
-            <div class="bottom-div">
-                <h2>Total Cars</h2>
-            </div>
+            <!-- &lt;!&ndash;bottom &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;
+             <div class="bottom-div">
+                 <h2 class="headers-of-dashboard">Total Cars</h2>
+             </div>-->
         </div>
 
     </div>
@@ -426,7 +397,8 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="adminPasswordTextField" style="font-weight: bold">Password</label>
-                    <input aria-describedby="unitPriceHelp" class="form-control" id="adminPasswordTextField" type="text">
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="adminPasswordTextField"
+                           type="text">
                     <div class="form-text" id="adminPassword"></div>
                 </div>
             </section>
@@ -436,9 +408,9 @@
     <!--button set and search bar-->
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel5">
         <button class="btn btn-success  btn-sm" id="adminSaveBtn" style="width: 60px" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" style="width: 60px" type="button">Update</button>
-        <button class="btn btn-danger  btn-sm" style="width: 60px" type="button">Delete</button>
-        <button class="btn btn-primary  btn-sm" style="width: 60px" type="button">Search</button>
+        <button class="btn btn-warning  btn-sm" style="width: 65px" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>
+        <button class="btn btn-primary  btn-sm" style="width: 65px" type="button">Search</button>
     </section>
     <section>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
@@ -574,9 +546,9 @@
     <!--button set and search bar-->
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel1">
         <button class="btn btn-success  btn-sm" id="carSaveBtn" style="width: 60px" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" style="width: 60px" type="button">Update</button>
-        <button class="btn btn-danger  btn-sm" style="width: 60px" type="button">Delete</button>
-        <button class="btn btn-primary  btn-sm" style="width: 60px" type="button">Search</button>
+        <button class="btn btn-warning  btn-sm" style="width: 65px" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>
+        <button class="btn btn-primary  btn-sm" style="width: 65px" type="button">Search</button>
     </section>
     <section>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
@@ -628,6 +600,67 @@
     </section>
 </section>
 <!-----------------------------------5.Customer Section (CRUD)--------------------------------->
+<section id="customerSection">
+    <section style="width: 40%; height: 100%; margin-left: 30%" id="customerSectionForm">
+        <form class="text-center border border-light p-5" action="#!">
+
+            <p class="h4 mb-4" style="font-size: 40px">Sign up</p>
+
+            <div class="form-row mb-4">
+                <div class="col">
+                    <input type="text" id="customerIdTextField" class="form-control" placeholder="Cutomer ID">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="customerNameTextField" class="form-control" placeholder="Name">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="customerAddressTextField" class="form-control" placeholder="Address">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="customerNicTextField" class="form-control" placeholder="NIC">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="customerLicenseNoTextField" class="form-control" placeholder="License No">
+                </div>
+                <div class="col mt-4">
+                    <input type="date" id="customerRegisteredDateTextField" class="form-control" placeholder="Registered Date" >
+                </div>
+            </div>
+
+            <!-- E-mail -->
+            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            <!-- Phone number -->
+            <input type="text" id="customerContactNo" class="form-control" placeholder="Contact No" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+
+            <!-- Password -->
+            <input type="password" id="defaultRegisterFormPassword" class="form-control mt-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+            <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                At least 8 characters and 1 digit
+            </small>
+
+            <!-- Sign up button -->
+            <button class="btn btn-primary my-4 btn-block" type="submit">Sign in</button>
+
+            <!-- Social register -->
+            <p>or sign up with:</p>
+
+            <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+            <hr>
+
+            <!-- Terms of service -->
+            <p>By clicking
+                <em>Sign up</em> you agree to our
+                <a href="" target="_blank">terms of service</a>
+
+        </form>
+        <!-- Default form register -->
+    </section>
+</section>
 <!-----------------------------------6.Customer Section (view)--------------------------------->
 <!-------------------------------------7.Driver Section (CRUD) done--------------------------------->
 <section id="driverSection" style="width: 85%; height: 100%">
@@ -679,9 +712,9 @@
     <!--button set and search bar-->
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel2">
         <button class="btn btn-success  btn-sm" id="driverSaveBtn" style="width: 60px" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" style="width: 60px" type="button">Update</button>
-        <button class="btn btn-danger  btn-sm" style="width: 60px" type="button">Delete</button>
-        <button class="btn btn-primary  btn-sm" style="width: 60px" type="button">Search</button>
+        <button class="btn btn-warning  btn-sm" style="width: 65px" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>
+        <button class="btn btn-primary  btn-sm" style="width: 65px" type="button">Search</button>
     </section>
     <section>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
@@ -721,16 +754,118 @@
 </section>
 <!----------------------------------8.Rent(Payment) Section------------------------------------>
 <!---------------------------------------9.Reserve Section------------------------------------->
+<section id="reservationSection" style="width: 100%; height: 100%">
+    <section>
+        <h1 class="text-center" id="reservationHeader">Reservation</h1>
+    </section>
+    <section id="reservationSectionForm">
+        <form>
+            <section class="row" style="width: 100%; margin-left: 0.3vw">
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="reservationIdTextField" style="font-weight: bold">Reservation
+                        ID</label>
+                    <input aria-describedby="idHelp" class="form-control" id="reservationIdTextField" type="text">
+                    <div class="form-text" id="reservationId"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="destinationTextField" style="font-weight: bold">Destination</label>
+                    <input aria-describedby="nameHelp" class="form-control" id="destinationTextField" type="text">
+                    <div class="form-text" id="destination"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="pickedTimeTextField" style="font-weight: bold">Picked Time</label>
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="pickedTimeTextField" type="time">
+                    <div class="form-text" id="pickedTime"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="pickedDateTextField" style="font-weight: bold">Picked Date</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="pickedDateTextField" type="date">
+                    <div class="form-text" id="pickedDate"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="returnTimeTextField" style="font-weight: bold">Returned Time</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="returnTimeTextField" type="time">
+                    <div class="form-text" id="returnTime"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="returnDateTextField" style="font-weight: bold">Returned Date</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="returnDateTextField" type="date">
+                    <div class="form-text" id="returnDate"></div>
+                </div>
+                <!--<div class="mb-2 col-3">
+                    <label class="form-label" for="driverWantOrNotTextField" style="font-weight: bold">Driver want or
+                        not</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="driverWantOrNotTextField"
+                           type="text">
+                    <div class="form-text" id="driverWantOrNot"></div>
+                </div>-->
+                <div class="form-check form-check-inline mb-2 col-1" id="driverWant">
+                    <input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions" type="radio"
+                           value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Want</label>
+                </div>
+                <div class="form-check form-check-inline mb-2 col-1" id="driverNot">
+                    <input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions" type="radio"
+                           value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Not</label>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="acceptOrDenyTextField" style="font-weight: bold">Accept or
+                        deny</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="acceptOrDenyTextField" type="text">
+                    <div class="form-text" id="acceptOrDeny"></div>
+                </div>
+            </section>
+        </form>
+        <!--table-->
+        <section>
+            <table class="table table-secondary table-striped mt-3 m-lg-2" style="width: 99%">
+                <thead>
+                <tr>
+                    <th scope="col">Reserve ID</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Picked Time</th>
+                    <th scope="col">Picked Date</th>
+                    <th scope="col">Returned Time</th>
+                    <th scope="col">Returned Date</th>
+                    <th scope="col">Driver want or not</th>
+                    <th scope="col">Accept or deny</th>
+                </tr>
+                </thead>
+                <tbody id="tblReservationCart">
+                <tr>
+                    <td>RES001</td>
+                    <td>Colombo</td>
+                    <td>4pm</td>
+                    <td>2022-07-05</td>
+                    <td>4pm</td>
+                    <td>2022-07-10</td>
+                    <td>Want</td>
+                    <td>Accept</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <!--button set and search bar-->
+    <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel6">
+        <button class="btn btn-success  btn-sm" id="reserveSaveBtn" style="width: 72px;" type="button">Reserve</button>
+        <button class="btn btn-warning  btn-sm" style="width: 65px" type="button">Update</button>
+        <button class="btn btn-primary  btn-sm" style="width: 60px" type="button">+Add</button>
+    </section>
+</section>
 <!--------------------------------------10.Reserve Section (view) done------------------------------>
 <section id="reserveViewSection" style="width: 85%; height: 100%">
     <section>
         <h1 class="text-center" id="reservationViewHeader">Reservation Details</h1>
     </section>
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel3">
-        <input aria-describedby="reserveViewSearchBarTextField" class="form-control" id="reserveViewSearchBarTextField"
+        <input aria-describedby="reserveViewSearchBarTextField" class="form-control"
+               id="reserveViewSearchBarTextField"
                style="margin-left: 30vw;" type="text">
         <div class="form-text" id="reserveViewSearchBar"></div>
-        <button class="btn btn-primary  btn-sm" style="width: 60px" type="button">Search</button>
+        <button class="btn btn-primary  btn-sm" style="width: 65px" type="button">Search</button>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
         </div>
     </section>
@@ -775,7 +910,7 @@
         <input aria-describedby="scheduleSearchBarTextField" class="form-control" id="scheduleSearchBarTextField"
                style="margin-left: 30vw;" type="text">
         <div class="form-text" id="scheduleSearchBar"></div>
-        <button class="btn btn-primary  btn-sm" style="width: 60px" type="button">Search</button>
+        <button class="btn btn-primary  btn-sm" style="width: 65px" type="button">Search</button>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
         </div>
     </section>
@@ -812,6 +947,7 @@
 <!-- JavaScript Bundle with Popper -->
 <script crossorigin="anonymous"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+</script>
 </body>
 </html>
