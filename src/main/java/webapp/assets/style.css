@@ -39,54 +39,7 @@
 .navbar-dark .navbar-nav .nav-link.active {
     color: var(--primary);
 }
-
-/*--------------------------Admin Section-----------------------------------*/
-#dashboard-Header {
-    padding: 25px;
-    font-family: fantasy;
-    color: rgb(108, 117, 125);
-}
-
-#adminSection {
-    position: absolute;
-    background-color: black;
-}
-
-#sideNav {
-    position: relative;
-    width: 15%;
-    height: 100%;
-    background-color: #F4F5F8;
-}
-
-#sideNavUl {
-    position: relative;
-    padding: 5px;
-    font-size: 20px;
-    font-family: "Times New Roman";
-    margin-left: 4vw;
-    list-style: none;
-    margin-top: -40px;
-}
-
-#sideNavUl > li {
-    padding-top: 25px;
-    font-weight: bold;
-}
-
-#midContainer {
-    position: relative;
-    border: 2px solid white;
-}
-
-#midContainer > div {
-    position: relative;
-    width: 20%;
-    height: 20%;
-    border: 2px solid white;
-}
-
-/*--------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 .dropdown-main {
     display: flex;
     flex-direction: column;
@@ -114,6 +67,173 @@
     text-decoration: none;
     stroke: none;
 }
+/*--------------------------------------dashboard------------------------------------------------*/
+#dashboardSection {
+    width: 100vw;
+    height: 100%;
+    /*background-color: cyan;*/
+    display: flex;
+    position: absolute;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+/*left side ----------------------------------------------------*/
+.left-side {
+    width: 17%;
+    /*width: 250px;*/
+    height: 100%;
+    /*background-color: red;*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-main-div {
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+    /*background-color: white;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.img-div {
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn-div{
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    width: 98%;
+    height: 90%;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.btn-img {
+    width: 80%;
+    height: 70%;
+}
+
+/*mid content ----------------------------------------------------*/
+.main-content {
+    width: 83%;
+    height: 100%;
+}
+
+.dash-div{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dash-title-div {
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.card-main-div {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dash-card-div {
+    width: 100%;
+    height: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-card {
+    width: 300px;
+    height: 120px;
+    /*background-color: black;*/
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.card-title {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    /*background-color: black;*/
+}
+
+.card-count-img {
+    width: 100%;
+    height: 75%;
+    display: flex;
+}
+
+.card-count {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    margin-left: 10px;
+}
+
+.card-img {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon {
+    width: 80%;
+    height: 70%;
+}
+
+
+/*bottom div -------------------------------------------*/
+.bottom-div {
+    width: 100%;
+    height: 185px;
+    display: flex;
+    align-items: center;
+}
+/*-----------------------------------------------------------------------------------------------*/
 /*------------------------------------------Login Section----------------------------------------*/
 #logInSectionDiv{
     position: relative;
@@ -126,12 +246,22 @@
     width: 100%;
 }
 /*-----------------------------------------------------------------------------------------------*/
-
-/*--------------------------------------------Car Section----------------------------------------*/
-#carSection{
+/*--------------------------Admin Section-----------------------------------*/
+#adminSection {
     position: relative;
     margin-top: 100vh;
 }
+#buttonPanel5{
+    position: relative;
+    margin-top: -7vh;
+    margin-right: 3vh;
+}
+#adminHeader{
+    color: #485460;
+}
+/*-------------------------------------------------------------------------*/
+
+/*--------------------------------------------Car Section----------------------------------------*/
 #buttonPanel1{
     position: relative;
     margin-top: -7vh;
@@ -142,9 +272,6 @@
 }
 /*-----------------------------------------------------------------------------------------------*/
 /*--------------------------------------------Driver Section----------------------------------------*/
-#driverSection{
-    position: relative;
-}
 #buttonPanel2{
     position: relative;
     margin-top: -8vh;
@@ -156,10 +283,13 @@
 /*-----------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------Schedule Section----------------------------------------*/
-#driverSection{
-    position: relative;
-}
 #scheduleHeader{
+    color: #485460;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Reserve View Section----------------------------------------*/
+
+#reservationViewHeader{
     color: #485460;
 }
 /*-----------------------------------------------------------------------------------------------*/
