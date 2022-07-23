@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
-<!----------------------------------------Home Page-------------------------------------------->
-<section style="width: 100%; height: 100%" id="homePageSection">
-
+<!----------------------------------------Home Page done-------------------------------------------->
+<section style="width: 100%; height: 100%;" id="homePageSection">
+        <img src="assets/images/car.jpg" width="100%" height="90%">
 </section>
 <!----------------------------------------nav bar---------------------------------------------->
 <!-- Topbar Start -->
-<div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
+<div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block" style="margin-top: -107vh;">
     <div class="row">
         <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
         </div>
@@ -133,8 +133,8 @@
         </form>
     </div>
 </section>
-<!-------------------------------------2.Dashboard Section------------------------------------->
-<section id="dashboardSection" style="width: 100%; height: 100%">
+<!-------------------------------------2.Dashboard Section done------------------------------------->
+<section id="dashboardSection" style="width: 100%; height: 100%; margin-top: 18vh;">
     <div class="left-side">
 
         <!--button card ---------------------------------------------->
@@ -376,7 +376,6 @@
 
     </div>
 </section>
-<!-----mekedi sections kadala ewta adala widiyata count eka pennanna meda div eke. side nav ekkin option denna------>
 <!--------------------------------------3.Admin Section (CRUD) done--------------------------------->
 <section id="adminSection" style="width: 85%; height: 100%">
     <section>
@@ -440,7 +439,7 @@
     </section>
 </section>
 <!----------------------------------------4.Car Section (CRUD) done--------------------------------->
-<section id="carSection" style="width: 85%; height: 100%">
+<section id="carSection" style="width: 85%; height: 100% ; margin-top: 46vh;">
     <section>
         <h1 class="text-center" id="carHeader">Car Manage</h1>
     </section>
@@ -599,8 +598,8 @@
         </table>
     </section>
 </section>
-<!-----------------------------------5.Customer Section (CRUD)--------------------------------->
-<section id="customerSection">
+<!-----------------------------------5.Customer Section (CRUD) done--------------------------------->
+<section id="customerSection" style="margin-top: 10vh;">
     <section style="width: 40%; height: 100%; margin-left: 30%" id="customerSectionForm">
         <form class="text-center border border-light p-5" action="#!">
 
@@ -661,9 +660,45 @@
         <!-- Default form register -->
     </section>
 </section>
-<!-----------------------------------6.Customer Section (view)--------------------------------->
+<!-----------------------------------6.Customer Section (view) done--------------------------------->
+<section id="customerViewSection" style="width: 85%; height: 100%;margin-top: 10vh;">
+    <section>
+        <h1 class="text-center" id="customerViewHeader">Customer Details</h1>
+    </section>
+    <!--table-->
+    <section>
+        <table class="table table-secondary table-striped mt-3 m-lg-2" style="width: 99%">
+            <thead>
+            <tr>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">NIC</th>
+                <th scope="col">License No</th>
+                <th scope="col">Registered Date</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Contact No</th>
+                <th scope="col">Password</th>
+            </tr>
+            </thead>
+            <tbody id="tblCustomerView">
+            <tr>
+                <td>C001</td>
+                <td>Ramal</td>
+                <td>200522421225</td>
+                <td>Panadura</td>
+                <td>CSE34567</td>
+                <td>2022-07-05</td>
+                <td>1bbhh@gmail.com</td>
+                <td>0115246325</td>
+                <td>******</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
 <!-------------------------------------7.Driver Section (CRUD) done--------------------------------->
-<section id="driverSection" style="width: 85%; height: 100%">
+<section id="driverSection" style="width: 85%; height: 100%; margin-top: 70vh;">
     <section>
         <h1 class="text-center" id="driverHeader">Driver Manage</h1>
     </section>
@@ -752,9 +787,111 @@
         </table>
     </section>
 </section>
-<!----------------------------------8.Rent(Payment) Section------------------------------------>
-<!---------------------------------------9.Reserve Section------------------------------------->
-<section id="reservationSection" style="width: 100%; height: 100%">
+<!----------------------------------8.Rent(Payment) Section done------------------------------------>
+<section id="rentSection">
+ <!--   <section>
+        <h1 class="text-center" id="rentHeader">Payment</h1>
+    </section>
+    <section id="rentSectionForm">
+        <form>
+            <section class="row" style="width: 100%; margin-left: 0.3vw">
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="paymentIdTextField" style="font-weight: bold">Payment ID</label>
+                    <input aria-describedby="idHelp" class="form-control" id="paymentIdTextField" type="text">
+                    <div class="form-text" id="paymentId"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="driverFeeTextField" style="font-weight: bold">Driver Fee</label>
+                    <input aria-describedby="nameHelp" class="form-control" id="driverFeeTextField" type="text">
+                    <div class="form-text" id="driverFee"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="rentDateTextField" style="font-weight: bold">Rent Date</label>
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="rentDateTextField" type="text">
+                    <div class="form-text" id="rentDate"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="ExtraKmFeeTextField" style="font-weight: bold">Extra Km Fee</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="ExtraKmFeeTextField" type="text">
+                    <div class="form-text" id="ExtraKmFee"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="rentFeeTextField" style="font-weight: bold">Rent Fee</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="rentFeeTextField" type="text">
+                    <div class="form-text" id="rentFee"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="lossDamagePaymentTextField" style="font-weight: bold">Loss Damage Waiver Payment</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="lossDamagePaymentTextField" type="text">
+                    <div class="form-text" id="lossDamagePayment"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="reducedAmountTextField" style="font-weight: bold">Reduced Amount (after loss)</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="reducedAmountTextField" type="text">
+                    <div class="form-text" id="reducedAmount"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="extraKmTextField" style="font-weight: bold">Extra Km</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="extraKmTextField" type="text">
+                    <div class="form-text" id="extraKm"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="fullPaymentTextField" style="font-weight: bold">Full Payment</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="fullPaymentTextField" type="text">
+                    <div class="form-text" id="fullPayment"></div>
+                </div>
+            </section>
+        </form>
+    </section>
+
+    &lt;!&ndash;button set and search bar&ndash;&gt;
+    <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel8">
+        <button class="btn btn-success  btn-sm" id="paymentSaveBtn" style="width: 60px" type="button">Paid</button>
+    </section>
+    <section>-->
+    <section style="width: 40%; height: 100%; margin-left: 30%" id="rentSectionForm">
+        <form class="text-center border border-light p-5" action="#!">
+
+            <p class="h4 mb-4" style="font-size: 40px">Payment Sheet</p>
+
+            <div class="form-row mb-4">
+                <div class="col">
+                    <input type="text" id="paymentIdTextField" class="form-control" placeholder="Payment ID">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="driverFeeTextField" class="form-control" placeholder="Driver Fee">
+                </div>
+                <div class="col mt-4">
+                    <input type="date" id="rentDateTextField" class="form-control" placeholder="Rent Date">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="extraKmFeeTextField" class="form-control" placeholder="Extra Km Fee">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="rentFeeTextField" class="form-control" placeholder="Rent Fee">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="lossDamagedPaymentTextField" class="form-control" placeholder="Loss Damage Waiver Payment" >
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="reducedAmountTextField" class="form-control" placeholder="Reduced Amount (after loss)" >
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="extraKmTextField" class="form-control" placeholder="Extra Km" >
+                </div>
+                <div class="col mt-4">
+                    <input type="text" id="fullPaymentTextField" class="form-control" placeholder="Full Payment" >
+                </div>
+            </div>
+
+            <!-- Sign up button -->
+            <button class="btn btn-primary my-4 btn-block" type="submit">Pay</button>
+
+        </form>
+    </section>
+</section>
+<!---------------------------------------9.Reserve Section done------------------------------------->
+<section id="reservationSection" style="width: 100%; height: 100%; margin-top: 30vh;">
     <section>
         <h1 class="text-center" id="reservationHeader">Reservation</h1>
     </section>
@@ -856,7 +993,7 @@
     </section>
 </section>
 <!--------------------------------------10.Reserve Section (view) done------------------------------>
-<section id="reserveViewSection" style="width: 85%; height: 100%">
+<section id="reserveViewSection" style="width: 85%; height: 100%; margin-top: 40vh;">
     <section>
         <h1 class="text-center" id="reservationViewHeader">Reservation Details</h1>
     </section>
@@ -900,7 +1037,7 @@
     </section>
 </section>
 <!--------------------------------------11.Schedule Section done------------------------------------>
-<section id="scheduleSection" style="width: 85%; height: 100%">
+<section id="scheduleSection" style="width: 85%; height: 100%; margin-top: 55vh;">
     <section>
         <h1 class="text-center" id="scheduleHeader">Schedule</h1>
         <h3 class="text-center" id="scheduleId">Schedule ID</h3>
