@@ -169,7 +169,7 @@
 .dash-div{
     width: 96%;
     height: 100%;
-    margin-top: -36vw;
+    margin-top: -45vw;
     margin-left: 19vw;
     background-color: white;
     display: flex;
@@ -337,4 +337,88 @@
     border: 2px solid black;
 }
 /*-----------------------------------------------------------------------------------------------*/
+
+#homePageSection {
+    transform: scale(1);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#dashboardSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#driverSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#customerSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#carSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#reservationSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#rentSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
 

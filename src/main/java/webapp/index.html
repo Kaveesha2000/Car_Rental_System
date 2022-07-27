@@ -5,6 +5,9 @@
     <title>Car Rental System</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/style.css" rel="stylesheet">
+<!--
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+-->
 
     <!-- CSS only -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -17,6 +20,52 @@
 <body>
 <!----------------------------------------Home Page done-------------------------------------------->
 <section style="width: 100%; height: 100%;" id="homePageSection">
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="position-relative px-lg-5" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a class="navbar-brand" href="index.html">
+                    <h1 class="text-uppercase text-black mb-1 m-lg-2">Easy Car Rentals</h1>
+                </a>
+                <button class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a class="nav-item nav-link active" href="index.html">Home</a>
+                        <a class="nav-item nav-link" href="#">About</a>
+                        <div class="dropdown dropdown-main">
+                            <button id="loginBtn" aria-expanded="false" class="btn btn-secondary dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    type="button">
+                                LOGIN
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="adminBtn">Admin</a></li>
+                                <li><a class="dropdown-item" id="driverBtn">Driver</a></li>
+                                <li><a class="dropdown-item" id="customerBtn">Customer</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown-main">
+                            <button aria-expanded="false" class="btn btn-secondary dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    type="button">
+                                CARS
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="carManageBtn">Manage</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-item nav-link" id="reserveBtn">Reserve</a>
+                        <a class="nav-item nav-link" id="rentBtn">Payment</a>
+                        <a class="nav-item nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--..-->
+    <!-- Navbar End -->
         <img src="assets/images/car.jpg" width="100%" height="90%">
 </section>
 <!----------------------------------------nav bar---------------------------------------------->
@@ -28,52 +77,6 @@
     </div>
 </div>
 <!-- Topbar End -->
-<!-- Navbar Start -->
-<div class="container-fluid position-relative nav-bar p-0">
-    <div class="position-relative px-lg-5" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-            <a class="navbar-brand" href="index.html">
-                <h1 class="text-uppercase text-black mb-1 m-lg-2">Easy Car Rentals</h1>
-            </a>
-            <button class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <div class="navbar-nav ml-auto py-0">
-                    <a class="nav-item nav-link active" href="#">Home</a>
-                    <a class="nav-item nav-link" href="#">About</a>
-                    <div class="dropdown dropdown-main">
-                        <button aria-expanded="false" class="btn btn-secondary dropdown-toggle"
-                                data-bs-toggle="dropdown"
-                                type="button">
-                            LOGIN
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Admin</a></li>
-                            <li><a class="dropdown-item" href="#">Driver</a></li>
-                            <li><a class="dropdown-item" href="#">Customer</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown dropdown-main">
-                        <button aria-expanded="false" class="btn btn-secondary dropdown-toggle"
-                                data-bs-toggle="dropdown"
-                                type="button">
-                            CARS
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Manage</a></li>
-                        </ul>
-                    </div>
-                    <a class="nav-item nav-link" href="#">Reserve</a>
-                    <a class="nav-item nav-link" href="#">Payment</a>
-                    <a class="nav-item nav-link" href="#">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
-<!--..-->
-<!-- Navbar End -->
 <!--------------------------------------1.Login Section done---------------------------------------->
 <section id="logInSection" style="width: 30%; height: 50%; margin-left: 35%;">
     <div id="logInSectionDiv">
@@ -134,7 +137,7 @@
     </div>
 </section>
 <!-------------------------------------2.Dashboard Section done------------------------------------->
-<section id="dashboardSection" style="width: 100%; height: 100%; margin-top: 18vh;">
+<section id="dashboardSection" style="width: 100%; height: 100%;">
     <div class="left-side">
 
         <!--button card ---------------------------------------------->
@@ -156,7 +159,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn">
+                <button id="dashboardDriverBtn" class="btn">
                     Driver
                 </button>
             </div>
@@ -232,7 +235,7 @@
     <div class="main-content">
 
         <!--dash div --------------------------------------------->
-        <div class="dash-div">
+        <div id="loadingSection" class="dash-div">
 
             <!--title div------------------------------------------>
             <div class="dash-title-div">
@@ -439,7 +442,7 @@
     </section>
 </section>
 <!----------------------------------------4.Car Section (CRUD) done--------------------------------->
-<section id="carSection" style="width: 85%; height: 100% ; margin-top: 46vh;">
+<section id="carSection" style="width: 85%; height: 100% ;">
     <section>
         <h1 class="text-center" id="carHeader">Car Manage</h1>
     </section>
@@ -599,7 +602,7 @@
     </section>
 </section>
 <!-----------------------------------5.Customer Section (CRUD) done--------------------------------->
-<section id="customerSection" style="margin-top: 10vh;">
+<section id="customerSection">
     <section style="width: 40%; height: 100%; margin-left: 30%" id="customerSectionForm">
         <form class="text-center border border-light p-5" action="#!">
 
@@ -661,7 +664,7 @@
     </section>
 </section>
 <!-----------------------------------6.Customer Section (view) done--------------------------------->
-<section id="customerViewSection" style="width: 85%; height: 100%;margin-top: 10vh;">
+<section id="customerViewSection" style="width: 85%; height: 100%;">
     <section>
         <h1 class="text-center" id="customerViewHeader">Customer Details</h1>
     </section>
@@ -698,7 +701,7 @@
     </section>
 </section>
 <!-------------------------------------7.Driver Section (CRUD) done--------------------------------->
-<section id="driverSection" style="width: 85%; height: 100%; margin-top: 70vh;">
+<section id="driverSection" style="width: 85%; height: 100%;">
     <section>
         <h1 class="text-center" id="driverHeader">Driver Manage</h1>
     </section>
@@ -891,7 +894,7 @@
     </section>
 </section>
 <!---------------------------------------9.Reserve Section done------------------------------------->
-<section id="reservationSection" style="width: 100%; height: 100%; margin-top: 30vh;">
+<section id="reservationSection" style="width: 100%; height: 100%;">
     <section>
         <h1 class="text-center" id="reservationHeader">Reservation</h1>
     </section>
@@ -993,7 +996,7 @@
     </section>
 </section>
 <!--------------------------------------10.Reserve Section (view) done------------------------------>
-<section id="reserveViewSection" style="width: 85%; height: 100%; margin-top: 40vh;">
+<section id="reserveViewSection" style="width: 85%; height: 100%;">
     <section>
         <h1 class="text-center" id="reservationViewHeader">Reservation Details</h1>
     </section>
@@ -1037,7 +1040,7 @@
     </section>
 </section>
 <!--------------------------------------11.Schedule Section done------------------------------------>
-<section id="scheduleSection" style="width: 85%; height: 100%; margin-top: 55vh;">
+<section id="scheduleSection" style="width: 85%; height: 100%;">
     <section>
         <h1 class="text-center" id="scheduleHeader">Schedule</h1>
         <h3 class="text-center" id="scheduleId">Schedule ID</h3>
@@ -1079,7 +1082,7 @@
     </section>
 </section>
 <!--------------------------------------12.Income Section-------------------------------------->
-<section class="row">
+<section id="incomeSection" class="row">
     <section>
         <h1 class="text-center" id="incomeHeader">Income Details</h1>
     </section>
@@ -1103,9 +1106,11 @@
 </section>
 <!-------------------------------------Script section---------------------------------------->
 <!-- JavaScript Bundle with Popper -->
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script crossorigin="anonymous"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
 </script>
+<script src="controller/HomePageController.js"></script>
 </body>
 </html>
