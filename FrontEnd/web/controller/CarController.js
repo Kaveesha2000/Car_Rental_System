@@ -112,7 +112,7 @@ function searchIfCustomerAlreadyExists() {
 */
 
 $("#carUpdateBtn").click(function () {
-        let text = "Do you really want to update this Customer?";
+        let text = "Do you really want to update this car?";
 
         if (confirm(text) == true) {
             let carId = $("#carIdTextField").val();
