@@ -1,0 +1,436 @@
+:root {
+    --primary: #F77D0A;
+    --secondary: #2B2E4A;
+    --light: #F4F5F8;
+    --dark: #1C1E32;
+}
+
+.nav-bar::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    background: var(--dark);
+}
+
+.nav-bar::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    padding: 30px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--light);
+    outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+/*---------------------------------------------------------------------------------------------*/
+.dropdown-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dropdown-main button {
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.dropdown-main button:hover {
+    border-color: rgb(108, 117, 125);
+    outline: none;
+    color: #F77D0A;
+    background-color: rgb(108, 117, 125);
+}
+
+.dropdown-main button:focus {
+    border-color: rgb(108, 117, 125);
+    outline: none;
+    color: #F77D0A;
+    background-color: rgb(108, 117, 125);
+    box-shadow: none;
+    text-decoration: none;
+    stroke: none;
+}
+/*--------------------------------------Home Page------------------------------------------------*/
+
+/*--------------------------------------dashboard------------------------------------------------*/
+.headers-of-dashboard{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    width: 100vw;
+    height: 100%;
+    /*background-color: cyan;*/
+    display: flex;
+    position: absolute;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+/*left side ----------------------------------------------------*/
+.left-side {
+    width: 20%;
+    /*width: 250px;*/
+    height: 100%;
+    /*background-color: red;*/
+    margin-top: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-main-div {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(108, 117, 125);
+    border-radius: 15px;
+}
+
+.btn-main-div:hover{
+    background-color: rgb(108, 117, 125);
+    cursor: pointer;
+    color: white;
+    border: 2px solid rgb(108, 117, 125);
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.space-div{
+    width: 90%;
+    height: 90px;
+}
+
+.img-div {
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn-div{
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    width: 98%;
+    height: 90%;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: rgb(108, 117, 125);
+}
+
+.btn-img {
+    width: 80%;
+    height: 70%;
+}
+
+/*mid content ----------------------------------------------------*/
+.main-content {
+    width: 83%;
+    height: 100%;
+}
+
+.dash-div{
+    width: 96%;
+    height: 100%;
+    margin-top: -45vw;
+    margin-left: 19vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dash-title-div {
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.card-main-div {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dash-card-div {
+    width: 100%;
+    height: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-card {
+    width: 300px;
+    height: 120px;
+    /*background-color: black;*/
+    border-radius: 15px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.dash-card:hover{
+    background-color: rgb(108, 117, 125);
+    border: 2px solid rgb(108, 117, 125);
+    cursor: pointer;
+    color: white;
+}
+
+.card-title {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+    margin-left: 10px;
+    /*background-color: black;*/
+}
+
+.card-count-img {
+    width: 100%;
+    height: 75%;
+    display: flex;
+}
+
+.card-count {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    margin-left: 10px;
+}
+
+.card-img {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon {
+    width: 70%;
+    height: 70%;
+}
+
+
+/*bottom div -------------------------------------------*/
+.bottom-div {
+    width: 100%;
+    height: 185px;
+    display: flex;
+    align-items: center;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------------------Login Section----------------------------------------*/
+#logInSectionDiv{
+    position: relative;
+    border: 2px solid black;
+    margin-top: 100vh;
+}
+#loginForm{
+    padding: 20px;
+}
+#signInBtn{
+    width: 100%;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------Admin Section-----------------------------------*/
+#adminSection {
+    position: relative;
+    margin-top: 8vh;
+}
+#buttonPanel5{
+    position: relative;
+    margin-top: -7vh;
+    margin-right: 3vh;
+}
+#adminHeader{
+    color: #485460;
+}
+/*-------------------------------------------------------------------------*/
+
+/*--------------------------------------------Car Section----------------------------------------*/
+#buttonPanel1{
+    position: relative;
+    margin-top: -7vh;
+    margin-right: 3vh;
+}
+#carHeader{
+    color: #485460;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Driver Section----------------------------------------*/
+#buttonPanel2{
+    position: relative;
+    margin-top: -8vh;
+    margin-right: 3vh;
+}
+#driverHeader{
+    color: #485460;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------Schedule Section----------------------------------------*/
+#scheduleHeader{
+    color: #485460;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Reserve View Section----------------------------------------*/
+#reservationViewHeader{
+    color: #485460;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Customer Section----------------------------------------*/
+
+#customerSectionForm{
+    border: 2px solid black;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+#homePageSection {
+    transform: scale(1);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#dashboardSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#driverSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#customerSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#carSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#reservationSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+#rentSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+/*
+#driverSection {
+    transform: scale(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}*/
