@@ -4,7 +4,7 @@ function generateCustomerIds() {
     var test = "id";
 
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/customer?test=" + test,
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/customer?customerId=" + test,
         method: "GET",
         success: function (response) {
             var customerId = response.data;
@@ -32,12 +32,11 @@ $("#saveCustomerBtn").click(function () {
 });
 
 function addCustomer() {
-    let text = "Do you really want to save this Customer?";
+    let text = "Do you really want to register?";
 
     if (confirm(text) == true) {
         addCustomerToDB();
     } else {
-
     }
 }
 
@@ -45,22 +44,21 @@ function addCustomerToDB() {
     let data = $("#customerForm").serialize();
 
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/customer",
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/customer",
         method: "POST",
         data: data,
         success: function (response) {
             if (response.code == 200) {
                 alert($("#customerIdTextField").val() + " " + response.message);
             }
-            loadAllCustomer();
         },
         error: function (ob) {
             alert(ob.responseJSON.message);
-            loadAllCustomer();
         }
     });
 }
 
+/*
 function loadAllCustomer() {
     $.ajax({
         url: "http://localhost:8080/CarRentalSystem_war/customer",
@@ -79,4 +77,4 @@ function loadAllCustomer() {
             alert(ob.responseJSON.message);
         }
     });
-}
+}*/

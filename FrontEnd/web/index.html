@@ -447,7 +447,7 @@
         <h1 class="text-center" id="carHeader">Car Manage</h1>
     </section>
     <section id="carSectionForm">
-        <form>
+        <form id="carForm">
             <section class="row" style="width: 100%; margin-left: 0.3vw">
                 <div class="mb-2 col-3">
                     <label class="form-label" for="carIdTextField" style="font-weight: bold">Car ID</label>
@@ -461,7 +461,7 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">No Of Passengers</label>
-                    <select aria-label="Default select example" class="form-select">
+                    <select id="noOfPassengers" aria-label="Default select example" class="form-select">
                         <option selected>None</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -478,7 +478,7 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">Type</label>
-                    <select aria-label="Default select example" class="form-select">
+                    <select id="type" aria-label="Default select example" class="form-select">
                         <option selected>None</option>
                         <option value="1">Mini</option>
                         <option value="2">Luxury</option>
@@ -496,7 +496,7 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">Fuel Type</label>
-                    <select aria-label="Default select example" class="form-select">
+                    <select id="fuelType" aria-label="Default select example" class="form-select">
                         <option selected>None</option>
                         <option value="1">Petrol</option>
                         <option value="2">Diesel</option>
@@ -504,11 +504,17 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">Transmission Type</label>
-                    <select aria-label="Default select example" class="form-select">
+                    <select id="transmissionType" aria-label="Default select example" class="form-select">
                         <option selected>None</option>
                         <option value="1">Automatic</option>
                         <option value="2">Manual</option>
                     </select>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="carExtraKmTextField" style="font-weight: bold">Extra Km</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="carExtraKmTextField"
+                           type="text">
+                    <div class="form-text" id="carExtraKm"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="dailyRatePricetextField" style="font-weight: bold">Daily Rate
@@ -523,6 +529,18 @@
                     <input aria-describedby="qtyOnHandHelp" class="form-control" id="monthlyRatePricetextField"
                            type="text">
                     <div class="form-text" id="monthlyRatePrice"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="availableOrNottextField" style="font-weight: bold">Available Or Not</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="availableOrNottextField"
+                           type="text">
+                    <div class="form-text" id="availableOrNot"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" for="underMaintainanceorNottextField" style="font-weight: bold">Under maintainance or not</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="underMaintainanceorNottextField"
+                           type="text">
+                    <div class="form-text" id="underMaintainanceorNot"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="frontView" style="font-weight: bold">Front View</label>
@@ -548,9 +566,9 @@
     <!--button set and search bar-->
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel1">
         <button class="btn btn-success  btn-sm" id="carSaveBtn" style="width: 60px" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" style="width: 65px" type="button">Update</button>
-        <button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>
-        <button class="btn btn-primary  btn-sm" style="width: 65px" type="button">Search</button>
+        <button class="btn btn-warning  btn-sm" id="carUpdateBtn" style="width: 65px" type="button">Update</button>
+        <!--<button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>-->
+        <button class="btn btn-primary  btn-sm" id="carSectionSearchBtn" style="width: 65px" type="button">Search</button>
     </section>
     <section>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
@@ -604,39 +622,39 @@
 <!-----------------------------------5.Customer Section (CRUD) done--------------------------------->
 <section id="customerSection">
     <section style="width: 40%; height: 100%; margin-left: 30%" id="customerSectionForm">
-        <form class="text-center border border-light p-5" id="customerForm">
+        <form class="text-center border border-light p-5" >
 
-            <p class="h4 mb-4" style="font-size: 40px">Sign up</p>
+            <p class="h4 mb-4" style="font-size: 40px">Sign up</p>id="customerForm"
 
             <div class="form-row mb-4">
                 <div class="col">
-                    <input type="text" id="customerIdTextField" class="form-control" placeholder="Cutomer ID">
+                    <input type="text" id="customerIdTextField" class="form-control" placeholder="Cutomer ID" name="customerId">
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="customerNameTextField" class="form-control" placeholder="Name">
+                    <input type="text" id="customerNameTextField" class="form-control" placeholder="Name" name="customerName">
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="customerAddressTextField" class="form-control" placeholder="Address">
+                    <input type="text" id="customerAddressTextField" class="form-control" placeholder="Address" name="customerAddress">
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="customerNicTextField" class="form-control" placeholder="NIC">
+                    <input type="text" id="customerNicTextField" class="form-control" placeholder="NIC" name="customerNIC">
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="customerLicenseNoTextField" class="form-control" placeholder="License No">
+                    <input type="text" id="customerLicenseNoTextField" class="form-control" placeholder="License No" name="customerLicenseNo">
                 </div>
                 <div class="col mt-4">
-                    <input type="date" id="customerRegisteredDateTextField" class="form-control" placeholder="Registered Date" >
+                    <input type="date" id="customerRegisteredDateTextField" class="form-control" placeholder="Registered Date" name="customerRegisteredDate">
                 </div>
             </div>
 
             <!-- E-mail -->
-            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" name="customerEmail">
 
             <!-- Phone number -->
-            <input type="text" id="customerContactNo" class="form-control" placeholder="Contact No" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+            <input type="text" id="customerContactNo" class="form-control" placeholder="Contact No" aria-describedby="defaultRegisterFormPhoneHelpBlock" name="customerContact">
 
             <!-- Password -->
-            <input type="password" id="defaultRegisterFormPassword" class="form-control mt-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+            <input type="password" id="defaultRegisterFormPassword" class="form-control mt-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="customerNewPassword">
             <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
                 At least 8 characters and 1 digit
             </small>

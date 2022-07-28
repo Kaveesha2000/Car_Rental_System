@@ -22,7 +22,6 @@ public class Car {
     private String carType;
     private String brand;
     private String fuelType;
-    private double price;
     private int noOfPassengers;
     private double wholeKm;
     private double extraOneKmFee;
