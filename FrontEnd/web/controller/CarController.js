@@ -1,4 +1,4 @@
-function generateCustomerIds() {
+function generateCarIds() {
     $("#carIdTextField").val("V00-0001");
 
     var test = "id";
@@ -53,7 +53,7 @@ function addCarToDB() {
         data: data,
         success: function (response) {
             if (response.code == 200) {
-                alert($("#carId").val() + " " + response.message);
+                alert($("#carIdTextField").val() + " " + response.message);
             }
             loadAllCar();
         },
@@ -81,7 +81,7 @@ function loadAllCar() {
             }
             clear();
             clickEvent();
-            generateCustomerIds();
+            generateCarIds();
         },
         error: function (ob) {
             alert(ob.responseJSON.message);

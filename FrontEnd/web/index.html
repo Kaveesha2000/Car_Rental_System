@@ -724,7 +724,7 @@
         <h1 class="text-center" id="driverHeader">Driver Manage</h1>
     </section>
     <section id="driverSectionForm">
-        <form>
+        <form id="driverForm">
             <section class="row" style="width: 100%; margin-left: 0.3vw">
                 <div class="mb-2 col-3">
                     <label class="form-label" for="driverIdTextField" style="font-weight: bold">Driver ID</label>
@@ -768,9 +768,9 @@
     <!--button set and search bar-->
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel2">
         <button class="btn btn-success  btn-sm" id="driverSaveBtn" style="width: 60px" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" style="width: 65px" type="button">Update</button>
-        <button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>
-        <button class="btn btn-primary  btn-sm" style="width: 65px" type="button">Search</button>
+        <button class="btn btn-warning  btn-sm" id="driverUpdateBtn" style="width: 65px" type="button">Update</button>
+        <!--<button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>-->
+        <button class="btn btn-primary btn-sm" id="driverSectionSearchBtn" style="width: 65px" type="button">Search</button>
     </section>
     <section>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
@@ -1132,5 +1132,7 @@
 <script src="controller/HomePageController.js"></script>
 <script src="controller/DashboardController.js"></script>
 <script src="controller/CustomerController.js"></script>
+<script src="controller/DriverController.js"></script>
+<script src="controller/CarController.js"></script>
 </body>
 </html>
