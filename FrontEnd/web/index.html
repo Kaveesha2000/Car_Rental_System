@@ -5,9 +5,6 @@
     <title>Car Rental System</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/style.css" rel="stylesheet">
-<!--
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
--->
 
     <!-- CSS only -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -42,7 +39,6 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" id="adminBtn">Admin</a></li>
-                                <li><a class="dropdown-item" id="driverBtn">Driver</a></li>
                                 <li><a class="dropdown-item" id="customerBtn">Customer</a></li>
                             </ul>
                         </div>
@@ -53,7 +49,7 @@
                                 CARS
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" id="carManageBtn">Manage</a></li>
+                                <li><a class="dropdown-item" id="carViewBtn">Manage</a></li>
                             </ul>
                         </div>
                         <a class="nav-item nav-link" id="reserveBtn">Reserve</a>
@@ -171,7 +167,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn">
+                <button id="dashboardCarBtn" class="btn">
                     Car
                 </button>
             </div>
@@ -183,7 +179,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn">
+                <button id="dashboardScheduleBtn" class="btn">
                     Schedule
                 </button>
             </div>
@@ -195,7 +191,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn">
+                <button id="dashboardIncomeBtn" class="btn">
                     Income
                 </button>
             </div>
@@ -207,7 +203,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn">
+                <button id="dashboardReservationViewBtn" class="btn">
                     Reservation View
                 </button>
             </div>
@@ -219,7 +215,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn">
+                <button id="dashboardCustomerViewBtn" class="btn">
                     Customer View
                 </button>
             </div>
@@ -810,66 +806,6 @@
 </section>
 <!----------------------------------8.Rent(Payment) Section done------------------------------------>
 <section id="rentSection">
- <!--   <section>
-        <h1 class="text-center" id="rentHeader">Payment</h1>
-    </section>
-    <section id="rentSectionForm">
-        <form>
-            <section class="row" style="width: 100%; margin-left: 0.3vw">
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="paymentIdTextField" style="font-weight: bold">Payment ID</label>
-                    <input aria-describedby="idHelp" class="form-control" id="paymentIdTextField" type="text">
-                    <div class="form-text" id="paymentId"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="driverFeeTextField" style="font-weight: bold">Driver Fee</label>
-                    <input aria-describedby="nameHelp" class="form-control" id="driverFeeTextField" type="text">
-                    <div class="form-text" id="driverFee"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="rentDateTextField" style="font-weight: bold">Rent Date</label>
-                    <input aria-describedby="unitPriceHelp" class="form-control" id="rentDateTextField" type="text">
-                    <div class="form-text" id="rentDate"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="ExtraKmFeeTextField" style="font-weight: bold">Extra Km Fee</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="ExtraKmFeeTextField" type="text">
-                    <div class="form-text" id="ExtraKmFee"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="rentFeeTextField" style="font-weight: bold">Rent Fee</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="rentFeeTextField" type="text">
-                    <div class="form-text" id="rentFee"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="lossDamagePaymentTextField" style="font-weight: bold">Loss Damage Waiver Payment</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="lossDamagePaymentTextField" type="text">
-                    <div class="form-text" id="lossDamagePayment"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="reducedAmountTextField" style="font-weight: bold">Reduced Amount (after loss)</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="reducedAmountTextField" type="text">
-                    <div class="form-text" id="reducedAmount"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="extraKmTextField" style="font-weight: bold">Extra Km</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="extraKmTextField" type="text">
-                    <div class="form-text" id="extraKm"></div>
-                </div>
-                <div class="mb-2 col-3">
-                    <label class="form-label" for="fullPaymentTextField" style="font-weight: bold">Full Payment</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="fullPaymentTextField" type="text">
-                    <div class="form-text" id="fullPayment"></div>
-                </div>
-            </section>
-        </form>
-    </section>
-
-    &lt;!&ndash;button set and search bar&ndash;&gt;
-    <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel8">
-        <button class="btn btn-success  btn-sm" id="paymentSaveBtn" style="width: 60px" type="button">Paid</button>
-    </section>
-    <section>-->
     <section style="width: 40%; height: 100%; margin-left: 30%" id="rentSectionForm">
         <form class="text-center border border-light p-5" action="#!">
 
