@@ -26,6 +26,7 @@ $("#adminBtn").click(function () {
     $("#reserveViewSection").css('display', 'none');
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
+
 })
 
 $("#customerBtn").click(function () {

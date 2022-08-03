@@ -26,7 +26,6 @@ function generateCustomerIds() {
     });
 }
 
-var tblCustomerRow;
 $("#saveCustomerBtn").click(function () {
     addCustomer();
 });
