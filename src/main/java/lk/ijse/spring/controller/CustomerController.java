@@ -46,7 +46,7 @@ public class CustomerController {
     }
 
     @GetMapping(params = {"customerId"},produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil generateCustomerIds(@PathVariable String customerId){
+    public ResponseUtil generateCustomerIds(@RequestParam String customerId){
         return new ResponseUtil(200,"Ok",customerService.generateCustomerIds());
     }
 

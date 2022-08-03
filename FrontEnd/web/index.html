@@ -39,6 +39,7 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" id="adminBtn">Admin</a></li>
+                                <li><a class="dropdown-item" id="driverBtn">Driver</a></li>
                                 <li><a class="dropdown-item" id="customerBtn">Customer</a></li>
                             </ul>
                         </div>
@@ -618,9 +619,9 @@
 <!-----------------------------------5.Customer Section (CRUD) done--------------------------------->
 <section id="customerSection">
     <section style="width: 40%; height: 100%; margin-left: 30%" id="customerSectionForm">
-        <form class="text-center border border-light p-5" >
+        <form id="customerForm" class="text-center border border-light p-5" >
 
-            <p class="h4 mb-4" style="font-size: 40px">Sign up</p>id="customerForm"
+            <p class="h4 mb-4" style="font-size: 40px">Sign up</p>
 
             <div class="form-row mb-4">
                 <div class="col">
@@ -724,38 +725,46 @@
             <section class="row" style="width: 100%; margin-left: 0.3vw">
                 <div class="mb-2 col-3">
                     <label class="form-label" for="driverIdTextField" style="font-weight: bold">Driver ID</label>
-                    <input aria-describedby="idHelp" class="form-control" id="driverIdTextField" type="text">
+                    <input aria-describedby="idHelp" class="form-control" id="driverIdTextField" type="text" name="driverId">
                     <div class="form-text" id="driverId"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="nameTextField" style="font-weight: bold">Name</label>
-                    <input aria-describedby="nameHelp" class="form-control" id="nameTextField" type="text">
+                    <input aria-describedby="nameHelp" class="form-control" id="nameTextField" type="text" name="driverName">
                     <div class="form-text" id="name"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="addressTextField" style="font-weight: bold">Address</label>
-                    <input aria-describedby="unitPriceHelp" class="form-control" id="addressTextField" type="text">
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="addressTextField" type="text" name="driverAddress">
                     <div class="form-text" id="address"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="contactNoTextField" style="font-weight: bold">Contact No</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="contactNoTextField" type="text">
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="contactNoTextField" type="text" name="driverContact">
                     <div class="form-text" id="contactNo"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="nicTextField" style="font-weight: bold">NIC</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="nicTextField" type="text">
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="nicTextField" type="text" name="driverNIC">
                     <div class="form-text" id="nic"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="licenseNoTextField" style="font-weight: bold">License No</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="licenseNoTextField" type="text">
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="licenseNoTextField" type="text" name="driverLicenseNo">
                     <div class="form-text" id="licenseNo"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="passwordTextField" style="font-weight: bold">Password</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="passwordTextField" type="text">
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="passwordTextField" type="text" name="driverPassword">
                     <div class="form-text" id="password"></div>
+                </div>
+                <div class="mb-2 col-3">
+                    <label class="form-label" style="font-weight: bold;">Release Or Not</label>
+                    <select id="releaseOrNot" aria-label="Default select example" class="form-select" name="driverReleaseOrNot">
+                        <option selected>None</option>
+                        <option value="Release">Release</option>
+                        <option value="Not Release">Not Release</option>
+                    </select>
                 </div>
             </section>
         </form>
@@ -788,18 +797,11 @@
                 <th scope="col">NIC</th>
                 <th scope="col">License No</th>
                 <th scope="col">Password</th>
+                <th scope="col">Release Or Not</th>
             </tr>
             </thead>
-            <tbody id="tblCustomer">
-            <tr>
-                <td>CUST001</td>
-                <td>Ramal</td>
-                <td>Galle</td>
-                <td>0918596455</td>
-                <td>200652213055</td>
-                <td>CAD442553</td>
-                <td>*****</td>
-            </tr>
+            <tbody id="tblDriver">
+
             </tbody>
         </table>
     </section>

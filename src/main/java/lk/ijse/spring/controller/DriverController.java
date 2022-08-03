@@ -4,6 +4,7 @@ import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.service.DriverService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -45,8 +46,13 @@ public class DriverController {
         return new ResponseUtil(200,"Ok",driverService.searchDriver(driverId));
     }
 
+    @GetMapping(params = {"driverId"},produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil generateDriverIds(@RequestParam String driverId){
+        return new ResponseUtil(200,"Ok",driverService.generateDriverIds());
+    }
+
     @GetMapping(params = {"releaseOrNot"},produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil releaseOrNot(@PathVariable boolean releaseOrNot){
+    public ResponseUtil releaseOrNot(@PathVariable String releaseOrNot){
         return new ResponseUtil(200,"Ok",driverService.releaseOrNot(releaseOrNot));
     }
 }

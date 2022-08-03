@@ -57,24 +57,3 @@ function addCustomerToDB() {
         }
     });
 }
-
-/*
-function loadAllCustomer() {
-    $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/customer",
-        method: "GET",
-        success: function (response) {
-
-            for (var responseKey of response.data) {
-                let raw = `<tr><td> ${responseKey.customerId} </td><td> ${responseKey.customerName} </td><td> ${responseKey.gender} </td><td> ${responseKey.contact} </td><td> ${responseKey.nic} </td><td> ${responseKey.address} </td><td> ${responseKey.email} </td></tr>`;
-                $("#tblCustomer tbody").append(raw);
-            }
-            clear();
-            clickEvent();
-            generateCustomerIds();
-        },
-        error: function (ob) {
-            alert(ob.responseJSON.message);
-        }
-    });
-}*/

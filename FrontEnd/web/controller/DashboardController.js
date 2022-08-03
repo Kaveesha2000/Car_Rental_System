@@ -12,6 +12,9 @@ $("#dashboardDriverBtn").click(function () {
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
     $("#driverSection").css('display', 'block');
+
+    generateDriverIds();
+    loadAllDriver();
 })
 
 $("#dashboardCarBtn").click(function () {

@@ -9,12 +9,14 @@ import java.util.List;
 
 public interface DriverRepo extends JpaRepository<Driver,String> {
 
-    //native sql
+    @Query(value = "SELECT driverId FROM Driver ORDER BY driverId DESC LIMIT 1", nativeQuery = true)
+    String generateDriverId();
+
     @Query(value = "select * from Driver", nativeQuery = true)
     List<Driver> getAllDriver();
 
     @Query(value = "select COUNT(*) from Driver where driverReleaseOrNot=:driverReleaseOrNot",nativeQuery = true)
-    int releaseOrNotCount(@Param("driverReleaseOrNot") boolean driverReleaseOrNot);
+    String releaseOrNotCount(@Param("driverReleaseOrNot") String driverReleaseOrNot);
 
     @Query(value = "UPDATE Driver SET driverReleaseOrNot=:release WHERE driverId=:driverId", nativeQuery = true)
     void updateDriverIfHeReleaseOrNot(@Param("release") String release, @Param("driverId") String driverId);

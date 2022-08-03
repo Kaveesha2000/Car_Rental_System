@@ -65,7 +65,12 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
-    public int releaseOrNot(boolean b) {
+    public String generateDriverIds() {
+        return repo.generateDriverId();
+    }
+
+    @Override
+    public String releaseOrNot(String b) {
         return repo.releaseOrNotCount(b);
     }
 }

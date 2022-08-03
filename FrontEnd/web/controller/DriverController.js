@@ -4,7 +4,7 @@ function generateDriverIds() {
     var test = "id";
 
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/driver?carId=" + test,
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/driver?driverId=" + test,
         method: "GET",
         success: function (response) {
             var driverId = response.data;
@@ -67,23 +67,56 @@ function loadAllDriver() {
         method: "GET",
         success: function (response) {
 
-            $("#tblCar tbody").empty();
+            $("#tblDriver").empty();
             for (var responseKey of response.data) {
-                let raw = `<tr><td> ${responseKey.carId} </td><td> ${responseKey.registerNo} </td><td> ${responseKey.transmissionType} </td><td> ${responseKey.color}</td><td> ${responseKey.carType} </td><td> ${responseKey.brand}
-                    </td><td> ${responseKey.fuelType} </td><td> ${responseKey.price}</td>
-                    <td>${responseKey.noOfPassengers}</td><td>${responseKey.wholeKm}</td><td>${responseKey.extraOneKmFee}</td><td>${responseKey.dailyRatePrice}</td>
-                    <td>${responseKey.monthlyRatePrice}</td><td>${responseKey.availableOrNot}</td><td>${responseKey.underMaintainanceOrNot}</td><td>${responseKey.frontView}</td><td>${responseKey.backView}</td><td> ${responseKey.sideView}</td><td> ${responseKey.interiorView}</td></tr>`;
-                $("#tblCar tbody").append(raw);
+                let raw = `<tr><td> ${responseKey.driverId} </td><td> ${responseKey.driverName} </td><td> ${responseKey.driverAddress} </td>
+                            <td> ${responseKey.driverContact}</td><td> ${responseKey.driverNIC} </td><td> ${responseKey.driverLicenseNo}
+                            </td><td> ${responseKey.driverPassword}</td><td> ${responseKey.driverReleaseOrNot}</td></tr>`;
+                $("#tblDriver").append(raw);
             }
-            clear();
-            clickEvent();
             generateDriverIds();
+            clickDriverTableRow();
         },
         error: function (ob) {
             alert(ob.responseJSON.message);
         }
     });
 
+}
+
+var tblDriverRow =-1;
+function clickDriverTableRow() {
+    $("#tblDriver > tr").click(function () {
+
+        tblDriverRow = $(this);
+
+        let text = "Do you want to edit driver ?";
+
+        if (confirm(text) == true) {
+            var driverId = $.trim(tblDriverRow.children(':nth-child(1)').text());
+            var driverName = $.trim(tblDriverRow.children(':nth-child(2)').text());
+            var driverAddress = $.trim(tblDriverRow.children(':nth-child(3)').text());
+            var driverContactNo = $.trim(tblDriverRow.children(':nth-child(4)').text());
+            var driverNIC = $.trim(tblDriverRow.children(':nth-child(5)').text());
+            var driverLicenseNo = $.trim(tblDriverRow.children(':nth-child(6)').text());
+            var driverPassword = $.trim(tblDriverRow.children(':nth-child(7)').text());
+            var driverReleaseOrNot = $.trim(tblDriverRow.children(':nth-child(8)').text());
+
+            $("#releaseOrNot").append($("<option selected></option>").attr("value", "repeat").text($.trim(tblDriverRow.children(':nth-child(8)').text())));
+
+            $("#driverIdTextField").val(driverId);
+            $("#nameTextField").val(driverName);
+            $("#addressTextField").val(driverAddress);
+            $("#contactNoTextField").val(driverContactNo);
+            $("#nicTextField").val(driverNIC);
+            $("#licenseNoTextField").val(driverLicenseNo);
+            $("#passwordTextField").val(driverPassword);
+            $("#releaseOrNot").val(driverReleaseOrNot);
+
+        } else {
+
+        }
+    });
 }
 
 $("#driverUpdateBtn").click(function () {
@@ -97,14 +130,16 @@ $("#driverUpdateBtn").click(function () {
         let driverNic = $("#nicTextField").val();
         let driverLicenseNo = $("#licenseNoTextField").val();
         let driverPassword = $("#passwordTextField").val();
+        let driverReleaseOrNot = $("#releaseOrNot option:selected").text();
 
-        $(tblCustomerRow).children(':nth-child(1)').text(driverId);
-        $(tblCustomerRow).children(':nth-child(2)').text(driverName);
-        $(tblCustomerRow).children(':nth-child(3)').text(driverAddress);
-        $(tblCustomerRow).children(':nth-child(4)').text(driverContactNo);
-        $(tblCustomerRow).children(':nth-child(5)').text(driverNic);
-        $(tblCustomerRow).children(':nth-child(6)').text(driverLicenseNo);
-        $(tblCustomerRow).children(':nth-child(7)').text(driverPassword);
+        $(tblDriverRow).children(':nth-child(1)').text(driverId);
+        $(tblDriverRow).children(':nth-child(2)').text(driverName);
+        $(tblDriverRow).children(':nth-child(3)').text(driverAddress);
+        $(tblDriverRow).children(':nth-child(4)').text(driverContactNo);
+        $(tblDriverRow).children(':nth-child(5)').text(driverNic);
+        $(tblDriverRow).children(':nth-child(6)').text(driverLicenseNo);
+        $(tblDriverRow).children(':nth-child(7)').text(driverPassword);
+        $(tblDriverRow).children(':nth-child(8)').text(driverReleaseOrNot);
 
         updateDriver();
 
@@ -119,10 +154,11 @@ function updateDriver() {
         driverId: $("#driverIdTextField").val(),
         driverName: $("#nameTextField").val(),
         driverAddress: $("#addressTextField").val(),
-        driverContactNo: $("#contactNoTextField").val(),
-        driverNic: $("#nicTextField").val(),
+        driverContact: $("#contactNoTextField").val(),
+        driverNIC: $("#nicTextField").val(),
         driverLicenseNo: $("#licenseNoTextField").val(),
         driverPassword: $("#passwordTextField").val(),
+        driverReleaseOrNot: $("#releaseOrNot option:selected").text()
     }
 
     $.ajax({
@@ -134,7 +170,7 @@ function updateDriver() {
             if (response.code == 200) {
                 alert($("#driverIdTextField").val() + " " + response.message);
             }
-            loadAllDriver()    ;
+            loadAllDriver();
         },
         error: function (ob) {
             alert(ob.responseJSON.message);
@@ -151,10 +187,11 @@ $("#driverSectionSearchBtn").click(function () {
             $("#driverIdTextField").val(response.data.driverId);
             $("#nameTextField").val(response.data.driverName);
             $("#addressTextField").val(response.data.driverAddress);
-            $("#contactNoTextField").val(response.data.driverContactNo);
-            $("#nicTextField").val(response.data.driverNic);
+            $("#contactNoTextField").val(response.data.driverContact);
+            $("#nicTextField").val(response.data.driverNIC);
             $("#licenseNoTextField").val(response.data.driverLicenseNo);
             $("#passwordTextField").val(response.data.driverPassword);
+            $("#releaseOrNot").val(response.data.driverReleaseOrNot);
 
             },
         error: function (ob) {
