@@ -31,6 +31,9 @@ $("#dashboardCarBtn").click(function () {
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
     $("#driverSection").css('display', 'none');
+
+    generateCarIds();
+    loadAllCar();
 })
 
 $("#dashboardScheduleBtn").click(function () {

@@ -117,16 +117,16 @@
 
                 <nav id="media_links">
                     <a href="https://twitter.com/kaveeshasandun1" style="padding: 10px; margin-right: 20px;">
-                        <img alt="twitter" height="35" src="../../src/main/java/webapp/assets/images/twit.png">
+                        <img alt="twitter" height="35" src="assets/images/twit.png">
                     </a>
                     <a href="https://www.linkedin.com/in/kaveesha-sanduni-358561201" style="padding: 10px">
-                        <img alt="linkedIn" height="30" src="../../src/main/java/webapp/assets/images/linked.png">
+                        <img alt="linkedIn" height="30" src="assets/images/linked.png">
                     </a>
                     <a href="https://github.com/Kaveesha2000" style="padding: 10px">
-                        <img alt="git hub" height="40" src="../../src/main/java/webapp/assets/images/git.png">
+                        <img alt="git hub" height="40" src="assets/images/git.png">
                     </a>
                     <a href="https://github.com/Kaveesha2000" style="padding: 10px">
-                        <img alt="git hub" height="25" src="../../src/main/java/webapp/assets/images/email.png">
+                        <img alt="git hub" height="25" src="assets/images/email.png">
                     </a>
                 </nav>
             </div>
@@ -448,17 +448,17 @@
             <section class="row" style="width: 100%; margin-left: 0.3vw">
                 <div class="mb-2 col-3">
                     <label class="form-label" for="carIdTextField" style="font-weight: bold">Car ID</label>
-                    <input aria-describedby="idHelp" class="form-control" id="carIdTextField" type="text">
+                    <input aria-describedby="idHelp" class="form-control" id="carIdTextField" type="text" name="caId">
                     <div class="form-text" id="carId"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="registerIdTextField" style="font-weight: bold">Register ID</label>
-                    <input aria-describedby="idHelp" class="form-control" id="registerIdTextField" type="text">
+                    <input aria-describedby="idHelp" class="form-control" id="registerIdTextField" type="text" name="registerNo">
                     <div class="form-text" id="registerId"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">No Of Passengers</label>
-                    <select id="noOfPassengers" aria-label="Default select example" class="form-select">
+                    <select id="noOfPassengers" aria-label="Default select example" class="form-select" name="noOfPassengers">
                         <option selected>None</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -470,12 +470,12 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="colorTextField" style="font-weight: bold">Color</label>
-                    <input aria-describedby="unitPriceHelp" class="form-control" id="colorTextField" type="text">
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="colorTextField" type="text" name="color">
                     <div class="form-text" id="color"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">Type</label>
-                    <select id="type" aria-label="Default select example" class="form-select">
+                    <select id="type" aria-label="Default select example" class="form-select" name="type">
                         <option selected>None</option>
                         <option value="1">Mini</option>
                         <option value="2">Luxury</option>
@@ -483,17 +483,17 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="wholeKmTextField" style="font-weight: bold">Whole Km</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="wholeKmTextField" type="text">
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="wholeKmTextField" type="text" name="wholeKm">
                     <div class="form-text" id="wholeKm"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="brandTextField" style="font-weight: bold">Brand</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="brandTextField" type="text">
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="brandTextField" type="text" name="brand">
                     <div class="form-text" id="brand"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">Fuel Type</label>
-                    <select id="fuelType" aria-label="Default select example" class="form-select">
+                    <select id="fuelType" aria-label="Default select example" class="form-select" name="fuelType">
                         <option selected>None</option>
                         <option value="1">Petrol</option>
                         <option value="2">Diesel</option>
@@ -501,15 +501,15 @@
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" style="font-weight: bold;">Transmission Type</label>
-                    <select id="transmissionType" aria-label="Default select example" class="form-select">
+                    <select id="transmissionType" aria-label="Default select example" class="form-select" name="transmissionType">
                         <option selected>None</option>
                         <option value="1">Automatic</option>
                         <option value="2">Manual</option>
                     </select>
                 </div>
                 <div class="mb-2 col-3">
-                    <label class="form-label" for="carExtraKmTextField" style="font-weight: bold">Extra Km</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="carExtraKmTextField"
+                    <label class="form-label" for="carExtraKmTextField" style="font-weight: bold">Extra 1 Km Fee</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="carExtraKmTextField" name="extraOneKmFee"
                            type="text">
                     <div class="form-text" id="carExtraKm"></div>
                 </div>
@@ -517,44 +517,44 @@
                     <label class="form-label" for="dailyRatePricetextField" style="font-weight: bold">Daily Rate
                         Price</label>
                     <input aria-describedby="qtyOnHandHelp" class="form-control" id="dailyRatePricetextField"
-                           type="text">
+                           type="text" name="dailyRateFee">
                     <div class="form-text" id="dailyRatePrice"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="monthlyRatePricetextField" style="font-weight: bold">Monthly Rate
                         Price</label>
                     <input aria-describedby="qtyOnHandHelp" class="form-control" id="monthlyRatePricetextField"
-                           type="text">
+                           type="text" name="monthlyRateFee">
                     <div class="form-text" id="monthlyRatePrice"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="availableOrNottextField" style="font-weight: bold">Available Or Not</label>
                     <input aria-describedby="qtyOnHandHelp" class="form-control" id="availableOrNottextField"
-                           type="text">
+                           type="text" name="availableOrNot">
                     <div class="form-text" id="availableOrNot"></div>
                 </div>
                 <div class="mb-2 col-3">
-                    <label class="form-label" for="underMaintainanceorNottextField" style="font-weight: bold">Under maintainance or not</label>
+                    <label class="form-label" for="underMaintainanceorNottextField" style="font-weight: bold">Under maintenance or not</label>
                     <input aria-describedby="qtyOnHandHelp" class="form-control" id="underMaintainanceorNottextField"
-                           type="text">
+                           type="text" name="underMaintainanceOrNot">
                     <div class="form-text" id="underMaintainanceorNot"></div>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="frontView" style="font-weight: bold">Front View</label>
-                    <input class="form-control" id="frontView" type="file"/>
+                    <input class="form-control" id="frontView" name="frontView" type="file"/>
                 </div>
 
                 <div class="mb-2 col-3">
                     <label class="form-label" for="sideView" style="font-weight: bold">Side View</label>
-                    <input class="form-control" id="sideView" type="file"/>
+                    <input class="form-control" id="sideView" name="sideView" type="file"/>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="backView" style="font-weight: bold">Back View</label>
-                    <input class="form-control" id="backView" type="file"/>
+                    <input class="form-control" id="backView" name="backView" type="file"/>
                 </div>
                 <div class="mb-2 col-3">
                     <label class="form-label" for="interiorView" style="font-weight: bold">Interior View</label>
-                    <input class="form-control" id="interiorView" type="file"/>
+                    <input class="form-control" id="interiorView" name="interiorView" type="file"/>
                 </div>
             </section>
         </form>
@@ -564,7 +564,6 @@
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel1">
         <button class="btn btn-success  btn-sm" id="carSaveBtn" style="width: 60px" type="button">+Add</button>
         <button class="btn btn-warning  btn-sm" id="carUpdateBtn" style="width: 65px" type="button">Update</button>
-        <!--<button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>-->
         <button class="btn btn-primary  btn-sm" id="carSectionSearchBtn" style="width: 65px" type="button">Search</button>
     </section>
     <section>
@@ -585,10 +584,14 @@
                 <th scope="col">Color</th>
                 <th scope="col">Type</th>
                 <th scope="col">Whole Km</th>
-                <th scope="col">Fuel</th>
-                <th scope="col">Transmission</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Fuel Type</th>
+                <th scope="col">Transmission Type</th>
+                <th scope="col">Extra Km Fee</th>
                 <th scope="col">Daily Rate</th>
                 <th scope="col">Monthly Rate</th>
+                <th scope="col">Available Or Not</th>
+                <th scope="col">Under Maintenance Or Not</th>
                 <th scope="col">Front View</th>
                 <th scope="col">Side View</th>
                 <th scope="col">Back View</th>
@@ -596,22 +599,7 @@
             </tr>
             </thead>
             <tbody id="tblCar">
-            <tr>
-                <td>CAR001</td>
-                <td>CARREG001</td>
-                <td>4</td>
-                <td>Black</td>
-                <td>Luxury</td>
-                <td>24Km</td>
-                <td>Petrol</td>
-                <td>Automatic</td>
-                <td>1000</td>
-                <td>25000</td>
-                <td>Front</td>
-                <td>Side</td>
-                <td>Back</td>
-                <td>Interior</td>
-            </tr>
+
             </tbody>
         </table>
     </section>
@@ -774,7 +762,6 @@
     <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel2">
         <button class="btn btn-success  btn-sm" id="driverSaveBtn" style="width: 60px" type="button">+Add</button>
         <button class="btn btn-warning  btn-sm" id="driverUpdateBtn" style="width: 65px" type="button">Update</button>
-        <!--<button class="btn btn-danger  btn-sm" style="width: 65px" type="button">Delete</button>-->
         <button class="btn btn-primary btn-sm" id="driverSectionSearchBtn" style="width: 65px" type="button">Search</button>
     </section>
     <section>

@@ -4,7 +4,7 @@ function generateCarIds() {
     var test = "id";
 
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/car?carId=" + test,
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/car?carID=" + test,
         method: "GET",
         success: function (response) {
             var carId = response.data;
@@ -27,10 +27,6 @@ function generateCarIds() {
 }
 
 $("#carSaveBtn").click(function () {
-
-    /* $("#tblCar tbody > tr").off("click");
-     $("#tblCar tbody > tr").off("dblclick");
-     */
     addCar();
 });
 
@@ -79,8 +75,6 @@ function loadAllCar() {
                     <td>${responseKey.monthlyRatePrice}</td><td>${responseKey.availableOrNot}</td><td>${responseKey.underMaintainanceOrNot}</td><td>${responseKey.frontView}</td><td>${responseKey.backView}</td><td> ${responseKey.sideView}</td><td> ${responseKey.interiorView}</td></tr>`;
                 $("#tblCar tbody").append(raw);
             }
-            clear();
-            clickEvent();
             generateCarIds();
         },
         error: function (ob) {
