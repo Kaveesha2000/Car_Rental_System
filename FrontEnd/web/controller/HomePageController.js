@@ -13,6 +13,26 @@ $("#scheduleSection").css('display', 'none');
 $("#incomeSection").css('display', 'none');
 $("#carViewSection").css('display', 'none');
 $("#driverViewSection").css('display', 'none');
+$("#aboutUsSection").css('display', 'none');
+
+$("#aboutUsBtn").click(function () {
+    $("#homePageSection").css('display', 'none');
+    $("#logInSection").css('display', 'none');
+    $("#dashboardSection").css('display', 'none');
+    $("#aboutUsSection").css('display', 'block');
+    $("#adminSection").css('display', 'none');
+    $("#carSection").css('display', 'none');
+    $("#customerSection").css('display', 'none');
+    $("#customerViewSection").css('display', 'none');
+    $("#driverSection").css('display', 'none');
+    $("#rentSection").css('display', 'none');
+    $("#reservationSection").css('display', 'none');
+    $("#reserveViewSection").css('display', 'none');
+    $("#scheduleSection").css('display', 'none');
+    $("#incomeSection").css('display', 'none');
+    $("#carViewSection").css('display', 'none');
+    $("#driverViewSection").css('display', 'none');
+})
 
 $("#adminBtn").click(function () {
     $("#homePageSection").css('display', 'none');
@@ -30,8 +50,9 @@ $("#adminBtn").click(function () {
     $("#incomeSection").css('display', 'none');
     $("#carViewSection").css('display', 'none');
     $("#driverViewSection").css('display', 'none');
+    $("#aboutUsSection").css('display', 'none');
 
- /*   generateAdminIds();*/
+    generateAdminIds();
 })
 
 $("#customerBtn").click(function () {
@@ -50,6 +71,7 @@ $("#customerBtn").click(function () {
     $("#incomeSection").css('display', 'none');
     $("#carViewSection").css('display', 'none');
     $("#driverViewSection").css('display', 'none');
+    $("#aboutUsSection").css('display', 'none');
 
     generateCustomerIds();
 })
@@ -70,6 +92,7 @@ $("#carViewBtn").click(function () {
     $("#incomeSection").css('display', 'none');
     $("#carViewSection").css('display', 'block');
     $("#driverViewSection").css('display', 'none');
+    $("#aboutUsSection").css('display', 'none');
 })
 
 $("#reserveBtn").click(function () {
@@ -88,6 +111,7 @@ $("#reserveBtn").click(function () {
     $("#incomeSection").css('display', 'none');
     $("#carViewSection").css('display', 'none');
     $("#driverViewSection").css('display', 'none');
+    $("#aboutUsSection").css('display', 'none');
 })
 
 $("#rentBtn").click(function () {
@@ -106,6 +130,7 @@ $("#rentBtn").click(function () {
     $("#incomeSection").css('display', 'none');
     $("#carViewSection").css('display', 'none');
     $("#driverViewSection").css('display', 'none');
+    $("#aboutUsSection").css('display', 'none');
 })
 
 $("#driverBtn").click(function () {
@@ -124,6 +149,7 @@ $("#driverBtn").click(function () {
     $("#incomeSection").css('display', 'none');
     $("#carViewSection").css('display', 'none');
     $("#driverViewSection").css('display', 'block');
+    $("#aboutUsSection").css('display', 'none');
 
     loadAllDriversToTableView();
 })

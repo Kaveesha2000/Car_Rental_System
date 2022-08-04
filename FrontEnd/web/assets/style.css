@@ -68,7 +68,20 @@
     stroke: none;
 }
 /*--------------------------------------Home Page------------------------------------------------*/
-
+#aboutUsImage{
+    width: 50%;
+    height: 50%;
+    margin-left: 25vw;
+    margin-top: 2vh;
+}
+#aboutUsHeader{
+    color: #b02a37;
+}
+#aboutUsPara{
+    width: 49%;
+    margin-left: 27vw;
+    margin-top: 5vh;
+}
 /*--------------------------------------dashboard------------------------------------------------*/
 .headers-of-dashboard{
     font-size: 16px;
@@ -484,6 +497,16 @@
     z-index: 2;
 }
 #adminSection {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+#aboutUsSection {
     min-height: 100vh;
     min-width: 100vw;
     position: fixed;
