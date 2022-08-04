@@ -31,6 +31,7 @@ $("#adminBtn").click(function () {
     $("#carViewSection").css('display', 'none');
     $("#driverViewSection").css('display', 'none');
 
+    generateAdminIds();
 })
 
 $("#customerBtn").click(function () {
