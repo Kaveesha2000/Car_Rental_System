@@ -101,3 +101,22 @@ $("#dashboardCustomerViewBtn").click(function () {
 
     loadAllCustomer();
 })
+
+$("#dashboardAdminBtn").click(function () {
+    $("#homePageSection").css('display', 'none');
+    $("#logInSection").css('display', 'none');
+    $("#dashboardSection").css('display', 'none');
+    $("#adminSection").css('display', 'block');
+    $("#carSection").css('display', 'none');
+    $("#customerSection").css('display', 'none');
+    $("#customerViewSection").css('display', 'none');
+    $("#rentSection").css('display', 'none');
+    $("#reservationSection").css('display', 'none');
+    $("#reserveViewSection").css('display', 'none');
+    $("#scheduleSection").css('display', 'none');
+    $("#incomeSection").css('display', 'none');
+    $("#driverSection").css('display', 'none');
+
+    generateAdminIds();
+    loadAllAdmin();
+})

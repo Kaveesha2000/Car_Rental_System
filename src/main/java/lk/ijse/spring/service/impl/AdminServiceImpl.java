@@ -51,6 +51,11 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
+    public String generateAdminIds() {
+        return repo.generateAdminId();
+    }
+
+    @Override
     public List<AdminDTO> getAllAdmin() {
         return mapper.map(repo.findAll(), new TypeToken<List<AdminDTO>>() {
         }.getType());

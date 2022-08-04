@@ -1,6 +1,7 @@
 function generateAdminIds() {
     var test = "id";
 
+    alert("admin gen")
     $.ajax({
         url: "http://localhost:8080/CarRentalSystem_war/api/v1/admin?adminId=" + test,
         method: "GET",

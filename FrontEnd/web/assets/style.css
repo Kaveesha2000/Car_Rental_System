@@ -292,8 +292,9 @@
 }
 #buttonPanel5{
     position: relative;
-    margin-top: -7vh;
-    margin-right: 3vh;
+    margin-top: 5vh;
+    width: 20vw;
+    height: 6vh;
 }
 #adminHeader{
     color: #485460;
@@ -476,6 +477,16 @@
     min-height: 100vh;
     min-width: 100vw;
     position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+}
+#adminSection {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
     background-size: cover;
     top: 0;
     left: 0;

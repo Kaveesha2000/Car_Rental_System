@@ -8,5 +8,6 @@ public interface AdminService {
     void saveAdmin(AdminDTO dto);
     void updateAdmin(AdminDTO dto);
     AdminDTO searchAdmin(String id);
+    String generateAdminIds();
     List<AdminDTO> getAllAdmin();
 }

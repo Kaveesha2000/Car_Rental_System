@@ -148,7 +148,17 @@
                     Dashboard
                 </button>
             </div>
+        </div>
+        <div class="btn-main-div">
+            <div class="img-div">
+                <img alt="" class="btn-img" src="assets/icons/dash.png">
+            </div>
 
+            <div class="btn-div">
+                <button id="dashboardAdminBtn" class="btn">
+                    Admin
+                </button>
+            </div>
         </div>
         <div class="btn-main-div">
             <div class="img-div">
@@ -400,22 +410,21 @@
                            type="text" name="adminPassword">
                     <div class="form-text" id="adminPassword"></div>
                 </div>
+                <!--button set and search bar-->
+                <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel5">
+                    <button class="btn btn-success  btn-sm" id="adminSaveBtn" style="width: 60px" type="button">+Add</button>
+                    <button class="btn btn-warning  btn-sm" id="adminUpdateBtn" style="width: 65px" type="button">Update</button>
+                    <button class="btn btn-primary  btn-sm" id="adminSearchBtn" style="width: 65px" type="button">Search</button>
+                </section>
+                <section>
+                    <div class="mt-4" style="width: 98%; margin-left: 1vw">
+                        <input aria-describedby="adminSearchBarTextField" class="form-control" id="adminSearchBarTextField"
+                               type="text">
+                        <div class="form-text" id="adminSearchBar"></div>
+                    </div>
+                </section>
             </section>
         </form>
-    </section>
-
-    <!--button set and search bar-->
-    <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel5">
-        <button class="btn btn-success  btn-sm" id="adminSaveBtn" style="width: 60px" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" id="adminUpdateBtn" style="width: 65px" type="button">Update</button>
-        <button class="btn btn-primary  btn-sm" id="adminSearchBtn" style="width: 65px" type="button">Search</button>
-    </section>
-    <section>
-        <div class="mt-4" style="width: 98%; margin-left: 1vw">
-            <input aria-describedby="adminSearchBarTextField" class="form-control" id="adminSearchBarTextField"
-                   type="text">
-            <div class="form-text" id="adminSearchBar"></div>
-        </div>
     </section>
     <!--table-->
     <section>
@@ -428,11 +437,7 @@
             </tr>
             </thead>
             <tbody id="tblAdmin">
-            <tr>
-                <td>A001</td>
-                <td>Kamal</td>
-                <td>*****</td>
-            </tr>
+
             </tbody>
         </table>
     </section>
