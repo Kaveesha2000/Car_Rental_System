@@ -175,7 +175,7 @@ function updateCar() {
     }
 
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/customer",
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/car",
         method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(carDetail),
@@ -194,7 +194,7 @@ function updateCar() {
 
 $("#carSectionSearchBtn").click(function () {
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/customer/" + $("#carSearchBarTextField").val(),
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/car/" + $("#carSearchBarTextField").val(),
         method: "GET",
         success: function (response) {
             $("#carIdTextField").val(response.data.carId);

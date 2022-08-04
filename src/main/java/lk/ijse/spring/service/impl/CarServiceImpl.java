@@ -24,7 +24,11 @@ public class CarServiceImpl implements CarService{
 
     @Override
     public void saveCar(CarDTO dto) {
+        System.out.println("=========================================================");
+        System.out.println(dto.toString());
         if (!repo.existsById(dto.getCarId())) {
+            Car map = mapper.map(dto, Car.class);
+            System.out.println(map.toString());
             repo.save(mapper.map(dto, Car.class));
         }else {
             throw new RuntimeException("Car Already Exist...!");

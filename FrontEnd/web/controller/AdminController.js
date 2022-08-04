@@ -97,9 +97,9 @@ function clickAdminTableRow() {
             var userName = $.trim(tblAdminRow.children(':nth-child(2)').text());
             var adminPassword = $.trim(tblAdminRow.children(':nth-child(3)').text());
 
-            $("#driverIdTextField").val(adminId);
-            $("#nameTextField").val(userName);
-            $("#addressTextField").val(adminPassword);
+            $("#adminIdTextField").val(adminId);
+            $("#adminNameTextField").val(userName);
+            $("#adminPasswordTextField").val(adminPassword);
 
         } else {
 
@@ -107,85 +107,65 @@ function clickAdminTableRow() {
     });
 }
 
-/*
-$("#driverUpdateBtn").click(function () {
-    let text = "Do you really want to update this driver?";
+$("#adminUpdateBtn").click(function () {
+    let text = "Do you really want to update this admin?";
 
     if (confirm(text) == true) {
-        let driverId = $("#driverIdTextField").val();
-        let driverName = $("#nameTextField").val();
-        let driverAddress = $("#addressTextField").val();
-        let driverContactNo = $("#contactNoTextField").val();
-        let driverNic = $("#nicTextField").val();
-        let driverLicenseNo = $("#licenseNoTextField").val();
-        let driverPassword = $("#passwordTextField").val();
-        let driverReleaseOrNot = $("#releaseOrNot option:selected").text();
 
-        $(tblDriverRow).children(':nth-child(1)').text(driverId);
-        $(tblDriverRow).children(':nth-child(2)').text(driverName);
-        $(tblDriverRow).children(':nth-child(3)').text(driverAddress);
-        $(tblDriverRow).children(':nth-child(4)').text(driverContactNo);
-        $(tblDriverRow).children(':nth-child(5)').text(driverNic);
-        $(tblDriverRow).children(':nth-child(6)').text(driverLicenseNo);
-        $(tblDriverRow).children(':nth-child(7)').text(driverPassword);
-        $(tblDriverRow).children(':nth-child(8)').text(driverReleaseOrNot);
+        let adminId = $("#adminIdTextField").val(adminId);
+        let adminName = $("#adminNameTextField").val(userName);
+        let adminPassword = $("#adminPasswordTextField").val(adminPassword);
 
-        updateDriver();
+        $(tblDriverRow).children(':nth-child(1)').text(adminId);
+        $(tblDriverRow).children(':nth-child(2)').text(adminName);
+        $(tblDriverRow).children(':nth-child(3)').text(adminPassword);
+
+        updateAdmin();
 
     } else {
 
     }
 });
 
-function updateDriver() {
+function updateAdmin() {
 
-    var driverDetail = {
-        driverId: $("#driverIdTextField").val(),
-        driverName: $("#nameTextField").val(),
-        driverAddress: $("#addressTextField").val(),
-        driverContact: $("#contactNoTextField").val(),
-        driverNIC: $("#nicTextField").val(),
-        driverLicenseNo: $("#licenseNoTextField").val(),
-        driverPassword: $("#passwordTextField").val(),
-        driverReleaseOrNot: $("#releaseOrNot option:selected").text()
+    var adminDetail = {
+        adminId: $("#adminIdTextField").val(),
+        username: $("#adminNameTextField").val(),
+        adminPassword: $("#adminPasswordTextField").val(),
     }
 
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/driver",
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/admin",
         method: "PUT",
         contentType: "application/json",
-        data: JSON.stringify(driverDetail),
+        data: JSON.stringify(adminDetail),
         success: function (response) {
             if (response.code == 200) {
-                alert($("#driverIdTextField").val() + " " + response.message);
+                alert($("#adminIdTextField").val() + " " + response.message);
             }
-            loadAllDriver();
+            loadAllAdmin();
         },
         error: function (ob) {
             alert(ob.responseJSON.message);
-            loadAllDriver();
+            loadAllAdmin();
         }
     });
 }
 
-$("#driverSectionSearchBtn").click(function () {
+$("#adminSearchBtn").click(function () {
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/driver/" + $("#carSearchBarTextField").val(),
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/admin/" + $("#adminSearchBarTextField").val(),
         method: "GET",
         success: function (response) {
-            $("#driverIdTextField").val(response.data.driverId);
-            $("#nameTextField").val(response.data.driverName);
-            $("#addressTextField").val(response.data.driverAddress);
-            $("#contactNoTextField").val(response.data.driverContact);
-            $("#nicTextField").val(response.data.driverNIC);
-            $("#licenseNoTextField").val(response.data.driverLicenseNo);
-            $("#passwordTextField").val(response.data.driverPassword);
-            $("#releaseOrNot").val(response.data.driverReleaseOrNot);
+            $("#adminIdTextField").val(response.data.adminId);
+            $("#adminNameTextField").val(response.data.username);
+            $("#adminPasswordTextField").val(response.data.adminPassword);
 
         },
         error: function (ob) {
             alert(ob.responseJSON.message);
-            loadAllDriver();
+            loadAllAdmin();
         }
     });
-});*/
+});
