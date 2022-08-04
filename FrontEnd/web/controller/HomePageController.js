@@ -11,6 +11,8 @@ $("#reservationSection").css('display', 'none');
 $("#reserveViewSection").css('display', 'none');
 $("#scheduleSection").css('display', 'none');
 $("#incomeSection").css('display', 'none');
+$("#carViewSection").css('display', 'none');
+$("#driverViewSection").css('display', 'none');
 
 $("#adminBtn").click(function () {
     $("#homePageSection").css('display', 'none');
@@ -26,6 +28,8 @@ $("#adminBtn").click(function () {
     $("#reserveViewSection").css('display', 'none');
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
+    $("#carViewSection").css('display', 'none');
+    $("#driverViewSection").css('display', 'none');
 
 })
 
@@ -43,6 +47,8 @@ $("#customerBtn").click(function () {
     $("#reserveViewSection").css('display', 'none');
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
+    $("#carViewSection").css('display', 'none');
+    $("#driverViewSection").css('display', 'none');
 
     generateCustomerIds();
 })
@@ -52,7 +58,7 @@ $("#carViewBtn").click(function () {
     $("#logInSection").css('display', 'none');
     $("#dashboardSection").css('display','none')
     $("#adminSection").css('display', 'none');
-    $("#carSection").css('display', 'block');
+    $("#carSection").css('display', 'none');
     $("#customerSection").css('display', 'none');
     $("#customerViewSection").css('display', 'none');
     $("#driverSection").css('display', 'none');
@@ -61,6 +67,8 @@ $("#carViewBtn").click(function () {
     $("#reserveViewSection").css('display', 'none');
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
+    $("#carViewSection").css('display', 'block');
+    $("#driverViewSection").css('display', 'none');
 })
 
 $("#reserveBtn").click(function () {
@@ -77,6 +85,8 @@ $("#reserveBtn").click(function () {
     $("#reserveViewSection").css('display', 'none');
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
+    $("#carViewSection").css('display', 'none');
+    $("#driverViewSection").css('display', 'none');
 })
 
 $("#rentBtn").click(function () {
@@ -93,4 +103,26 @@ $("#rentBtn").click(function () {
     $("#reserveViewSection").css('display', 'none');
     $("#scheduleSection").css('display', 'none');
     $("#incomeSection").css('display', 'none');
+    $("#carViewSection").css('display', 'none');
+    $("#driverViewSection").css('display', 'none');
+})
+
+$("#driverBtn").click(function () {
+    $("#homePageSection").css('display', 'none');
+    $("#logInSection").css('display', 'none');
+    $("#dashboardSection").css('display','none')
+    $("#adminSection").css('display', 'none');
+    $("#carSection").css('display', 'none');
+    $("#customerSection").css('display', 'none');
+    $("#customerViewSection").css('display', 'none');
+    $("#driverSection").css('display', 'none');
+    $("#rentSection").css('display', 'none');
+    $("#reservationSection").css('display', 'none');
+    $("#reserveViewSection").css('display', 'none');
+    $("#scheduleSection").css('display', 'none');
+    $("#incomeSection").css('display', 'none');
+    $("#carViewSection").css('display', 'none');
+    $("#driverViewSection").css('display', 'block');
+
+    loadAllDriversToTableView();
 })

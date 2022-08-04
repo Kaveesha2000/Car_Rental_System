@@ -1,6 +1,4 @@
 function generateDriverIds() {
-    $("#driverIdTextField").val("D00-0001");
-
     var test = "id";
 
     $.ajax({
@@ -8,16 +6,20 @@ function generateDriverIds() {
         method: "GET",
         success: function (response) {
             var driverId = response.data;
-            var tempId = parseInt(driverId.split("-")[1]);
-            tempId = tempId + 1;
-            if (tempId <= 9) {
-                $("#driverIdTextField").val("D00-000" + tempId);
-            } else if (tempId <= 99) {
-                $("#driverIdTextField").val("D00-00" + tempId);
-            } else if (tempId <= 999) {
-                $("#driverIdTextField").val("D00-0" + tempId);
-            } else {
-                $("#driverIdTextField").val("D00-" + tempId);
+            if (driverId==null){
+                $("#driverIdTextField").val("D00-0001");
+            }else {
+                var tempId = parseInt(driverId.split("-")[1]);
+                tempId = tempId + 1;
+                if (tempId <= 9) {
+                    $("#driverIdTextField").val("D00-000" + tempId);
+                } else if (tempId <= 99) {
+                    $("#driverIdTextField").val("D00-00" + tempId);
+                } else if (tempId <= 999) {
+                    $("#driverIdTextField").val("D00-0" + tempId);
+                } else {
+                    $("#driverIdTextField").val("D00-" + tempId);
+                }
             }
         },
         error: function (ob) {
@@ -200,3 +202,25 @@ $("#driverSectionSearchBtn").click(function () {
         }
     });
 });
+
+function loadAllDriversToTableView() {
+
+    $.ajax({
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/driver",
+        method: "GET",
+        success: function (response) {
+
+            $("#tblDriverView").empty();
+            for (var responseKey of response.data) {
+                let raw = `<tr><td> ${responseKey.driverId} </td><td> ${responseKey.driverName} </td>
+                            <td> ${responseKey.driverContact}</td><td> ${responseKey.driverLicenseNo}
+                            </td><td> ${responseKey.driverReleaseOrNot}</td></tr>`;
+                $("#tblDriverView").append(raw);
+            }
+        },
+        error: function (ob) {
+            alert(ob.responseJSON.message);
+        }
+    });
+
+}

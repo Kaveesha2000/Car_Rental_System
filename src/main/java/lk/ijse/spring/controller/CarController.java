@@ -45,7 +45,7 @@ public class CarController {
         return new ResponseUtil(200,"Ok",carService.getAllCar());
     }
 
-    @GetMapping(params = {"carID"},produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(params = {"carId"},produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil generateCarIds(@RequestParam String carId){
         return new ResponseUtil(200,"Ok",carService.generateCarIds());
     }

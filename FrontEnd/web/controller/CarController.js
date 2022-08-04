@@ -1,23 +1,26 @@
 function generateCarIds() {
-    $("#carIdTextField").val("V00-0001");
-
     var test = "id";
 
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/car?carID=" + test,
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/car?carId=" + test,
         method: "GET",
         success: function (response) {
             var carId = response.data;
-            var tempId = parseInt(carId.split("-")[1]);
-            tempId = tempId + 1;
-            if (tempId <= 9) {
-                $("#carIdTextField").val("V00-000" + tempId);
-            } else if (tempId <= 99) {
-                $("#carIdTextField").val("V00-00" + tempId);
-            } else if (tempId <= 999) {
-                $("#carIdTextField").val("V00-0" + tempId);
-            } else {
-                $("#carIdTextField").val("V00-" + tempId);
+
+            if (carId==null){
+                $("#carIdTextField").val("V00-0001");
+            }else {
+                var tempId = parseInt(carId.split("-")[1]);
+                tempId = tempId + 1;
+                if (tempId <= 9) {
+                    $("#carIdTextField").val("V00-000" + tempId);
+                } else if (tempId <= 99) {
+                    $("#carIdTextField").val("V00-00" + tempId);
+                } else if (tempId <= 999) {
+                    $("#carIdTextField").val("V00-0" + tempId);
+                } else {
+                    $("#carIdTextField").val("V00-" + tempId);
+                }
             }
         },
         error: function (ob) {
@@ -61,21 +64,21 @@ function addCarToDB() {
 }
 
 function loadAllCar() {
-
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war/api/v1/customer",
+        url: "http://localhost:8080/CarRentalSystem_war/api/v1/car",
         method: "GET",
         success: function (response) {
-
-            $("#tblCar tbody").empty();
-            for (var responseKey of response.data) {
-                let raw = `<tr><td> ${responseKey.carId} </td><td> ${responseKey.registerNo} </td><td> ${responseKey.transmissionType} </td><td> ${responseKey.color}</td><td> ${responseKey.carType} </td><td> ${responseKey.brand}
-                    </td><td> ${responseKey.fuelType} </td><td> ${responseKey.price}</td>
-                    <td>${responseKey.noOfPassengers}</td><td>${responseKey.wholeKm}</td><td>${responseKey.extraOneKmFee}</td><td>${responseKey.dailyRatePrice}</td>
-                    <td>${responseKey.monthlyRatePrice}</td><td>${responseKey.availableOrNot}</td><td>${responseKey.underMaintainanceOrNot}</td><td>${responseKey.frontView}</td><td>${responseKey.backView}</td><td> ${responseKey.sideView}</td><td> ${responseKey.interiorView}</td></tr>`;
-                $("#tblCar tbody").append(raw);
+            if (response.data!=null){
+                $("#tblCar").empty();
+                for (var responseKey of response.data) {
+                    let raw = `<tr><td> ${responseKey.carId} </td><td> ${responseKey.registerNo} </td><td> ${responseKey.noOfPassengers} </td><td> ${responseKey.color}</td><td> ${responseKey.carType} </td><td> ${responseKey.wholeKm}
+                    </td><td> ${responseKey.brand} </td><td> ${responseKey.fuelType}</td>
+                    <td>${responseKey.transmissionType}</td><td>${responseKey.extraOneKmFee}</td><td>${responseKey.dailyRatePrice}</td><td>${responseKey.monthlyRatePrice}</td>
+                    <td>${responseKey.availableOrNot}</td><td>${responseKey.underMaintainanceOrNot}</td><td>${responseKey.frontView}</td><td>${responseKey.sideView}</td><td>${responseKey.backView}</td><td> ${responseKey.interiorView}</td></tr>`;
+                    $("#tblCar").append(raw);
+                }
+                generateCarIds();
             }
-            generateCarIds();
         },
         error: function (ob) {
             alert(ob.responseJSON.message);

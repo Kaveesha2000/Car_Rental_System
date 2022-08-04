@@ -50,7 +50,7 @@
                                 CARS
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" id="carViewBtn">Manage</a></li>
+                                <li><a class="dropdown-item" id="carViewBtn">View Cars</a></li>
                             </ul>
                         </div>
                         <a class="nav-item nav-link" id="reserveBtn">Reserve</a>
@@ -556,15 +556,14 @@
                     <label class="form-label" for="interiorView" style="font-weight: bold">Interior View</label>
                     <input class="form-control" id="interiorView" name="interiorView" type="file"/>
                 </div>
+                <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel1">
+                    <button class="btn btn-success  btn-sm" id="carSaveBtn" style="width: 60px" type="button">+Add</button>
+                    <button class="btn btn-warning  btn-sm" id="carUpdateBtn" style="width: 65px" type="button">Update</button>
+                    <button class="btn btn-primary  btn-sm" id="carSectionSearchBtn" style="width: 65px" type="button">Search</button>
+                </section>
             </section>
         </form>
-    </section>
 
-    <!--button set and search bar-->
-    <section class="d-grid gap-2 d-md-flex justify-content-md-end" id="buttonPanel1">
-        <button class="btn btn-success  btn-sm" id="carSaveBtn" style="width: 60px" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" id="carUpdateBtn" style="width: 65px" type="button">Update</button>
-        <button class="btn btn-primary  btn-sm" id="carSectionSearchBtn" style="width: 65px" type="button">Search</button>
     </section>
     <section>
         <div class="mt-4" style="width: 98%; margin-left: 1vw">
@@ -599,6 +598,42 @@
             </tr>
             </thead>
             <tbody id="tblCar">
+
+            </tbody>
+        </table>
+    </section>
+</section>
+<!----------------------------------------4.Car Section (View) done--------------------------------->
+<section id="carViewSection" style="width: 85%; height: 100% ;">
+    <section>
+        <h1 class="text-center" id="carViewHeader">Car Details</h1>
+    </section>
+    <!--table-->
+    <section>
+        <table class="table table-secondary table-striped mt-3 m-lg-2" style="width: 99%">
+            <thead>
+            <tr>
+                <th scope="col">Car ID</th>
+                <th scope="col">Reg ID</th>
+                <th scope="col">Passenger Count</th>
+                <th scope="col">Color</th>
+                <th scope="col">Type</th>
+                <th scope="col">Whole Km</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Fuel Type</th>
+                <th scope="col">Transmission Type</th>
+                <th scope="col">Extra Km Fee</th>
+                <th scope="col">Daily Rate</th>
+                <th scope="col">Monthly Rate</th>
+                <th scope="col">Available Or Not</th>
+                <th scope="col">Under Maintenance Or Not</th>
+                <th scope="col">Front View</th>
+                <th scope="col">Side View</th>
+                <th scope="col">Back View</th>
+                <th scope="col">Interior View</th>
+            </tr>
+            </thead>
+            <tbody id="tblCarView">
 
             </tbody>
         </table>
@@ -688,17 +723,7 @@
             </tr>
             </thead>
             <tbody id="tblCustomerView">
-            <tr>
-                <td>C001</td>
-                <td>Ramal</td>
-                <td>200522421225</td>
-                <td>Panadura</td>
-                <td>CSE34567</td>
-                <td>2022-07-05</td>
-                <td>1bbhh@gmail.com</td>
-                <td>0115246325</td>
-                <td>******</td>
-            </tr>
+
             </tbody>
         </table>
     </section>
@@ -788,6 +813,30 @@
             </tr>
             </thead>
             <tbody id="tblDriver">
+
+            </tbody>
+        </table>
+    </section>
+</section>
+<!-------------------------------------7.Driver Section (View) done--------------------------------->
+<section id="driverViewSection" style="width: 85%; height: 100% ;">
+    <section>
+        <h1 class="text-center" id="driverViewHeader">Driver Details</h1>
+    </section>
+    <section>
+        <table class="table table-secondary table-striped mt-3 m-lg-2" style="width: 99%">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact No</th>
+                <th scope="col">NIC</th>
+                <th scope="col">License No</th>
+                <th scope="col">Release Or Not</th>
+            </tr>
+            </thead>
+            <tbody id="tblDriverView">
 
             </tbody>
         </table>
